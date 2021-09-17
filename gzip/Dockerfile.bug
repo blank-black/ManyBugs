@@ -1,4 +1,4 @@
-FROM squareslab/manybugs:gzip
+FROM semu/manybugs:gzip
 
 ARG perl
 RUN perlbrew install "perl-${perl}" && \

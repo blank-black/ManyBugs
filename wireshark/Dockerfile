@@ -1,4 +1,4 @@
-FROM squareslab/manybugs:base
+FROM semu/manybugs:base
 
 # necessary to link shared libraries
 # https://ubuntuforums.org/showthread.php?t=975334

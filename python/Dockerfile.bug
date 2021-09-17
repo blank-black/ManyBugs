@@ -1,6 +1,7 @@
-FROM squareslab/manybugs:python
+FROM semu/manybugs:python
 
 ARG scenario
+ARG DEBIAN_FRONTEND=noninteractive
 ENV SCENARIO_NAME ${scenario}
 ENV OLD_LOCATION /root/mountpoint-genprog/genprog-many-bugs/${SCENARIO_NAME}
 RUN cd /experiment && \

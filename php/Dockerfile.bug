@@ -1,4 +1,4 @@
-FROM squareslab/manybugs:php
+FROM semu/manybugs:php
 MAINTAINER Chris Timperley "christimperley@gmail.com"
 
 # Install dependencies

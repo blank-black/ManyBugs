@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM thierrytct/klee-semu-relmut:llvm-3.4.2
 
 # Create docker user
 RUN apt-get update && \

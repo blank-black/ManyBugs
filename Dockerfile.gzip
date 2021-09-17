@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM thierrytct/klee-semu-relmut:llvm-3.4.2
 MAINTAINER Chris Timperley "christimperley@gmail.com"
 
 

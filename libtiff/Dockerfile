@@ -1,4 +1,4 @@
-FROM squareslab/manybugs:base
+FROM semu/manybugs:base
 MAINTAINER Chris Timperley "christimperley@gmail.com"
 
 RUN sudo apt-get update && \

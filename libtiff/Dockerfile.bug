@@ -1,4 +1,4 @@
-FROM squareslab/manybugs:libtiff
+FROM semu/manybugs:libtiff
 
 ARG scenario
 ENV SCENARIO_NAME ${scenario}

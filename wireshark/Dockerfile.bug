@@ -1,4 +1,4 @@
-FROM squareslab/manybugs:wireshark
+FROM semu/manybugs:wireshark
 
 ARG scenario
 ENV SCENARIO_NAME ${scenario}

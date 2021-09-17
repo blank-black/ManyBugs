@@ -2,10 +2,10 @@ version: "1.0"
 
 blueprints:
   - type: docker
-    tag: squareslab/manybugs:php
+    tag: semu/manybugs:php
     file: Dockerfile
     context: .
-    depends-on: squareslab/manybugs:base
+    depends-on: semu/manybugs:base
 
   - arguments:
       autoconf: '2.59'
@@ -13,9 +13,9 @@ blueprints:
       bug_revision: 18d71a6f59
       fix_revision: 187eb235fe
       scenario: php-bug-2011-04-06-18d71a6f59-187eb235fe
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-04-06-18d71a6f59-187eb235fe
+    tag: semu/manybugs:php-2011-04-06-18d71a6f59-187eb235fe
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -23,9 +23,9 @@ blueprints:
       bug_revision: d54e6ce832
       fix_revision: 23e65a9dcc
       scenario: php-bug-2012-03-08-d54e6ce832-23e65a9dcc
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-03-08-d54e6ce832-23e65a9dcc
+    tag: semu/manybugs:php-2012-03-08-d54e6ce832-23e65a9dcc
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -33,9 +33,9 @@ blueprints:
       bug_revision: 453c954f8a
       fix_revision: daecb2c0f4
       scenario: php-bug-2011-05-17-453c954f8a-daecb2c0f4
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-05-17-453c954f8a-daecb2c0f4
+    tag: semu/manybugs:php-2011-05-17-453c954f8a-daecb2c0f4
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -43,9 +43,9 @@ blueprints:
       bug_revision: 6237456cae
       fix_revision: 5e80c05deb
       scenario: php-bug-2012-03-06-6237456cae-5e80c05deb
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-03-06-6237456cae-5e80c05deb
+    tag: semu/manybugs:php-2012-03-06-6237456cae-5e80c05deb
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -53,9 +53,9 @@ blueprints:
       bug_revision: 51a4ae6576
       fix_revision: bc810a443d
       scenario: php-bug-2011-11-19-51a4ae6576-bc810a443d
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-11-19-51a4ae6576-bc810a443d
+    tag: semu/manybugs:php-2011-11-19-51a4ae6576-bc810a443d
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -63,9 +63,9 @@ blueprints:
       bug_revision: db01e840c2
       fix_revision: 09b990f499
       scenario: php-bug-2011-04-09-db01e840c2-09b990f499
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-04-09-db01e840c2-09b990f499
+    tag: semu/manybugs:php-2011-04-09-db01e840c2-09b990f499
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -73,9 +73,9 @@ blueprints:
       bug_revision: db0c957f02
       fix_revision: 8ba00176f1
       scenario: php-bug-2011-05-13-db0c957f02-8ba00176f1
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-05-13-db0c957f02-8ba00176f1
+    tag: semu/manybugs:php-2011-05-13-db0c957f02-8ba00176f1
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -83,9 +83,9 @@ blueprints:
       bug_revision: fefe9fc5c7
       fix_revision: 0927309852
       scenario: php-bug-2011-02-01-fefe9fc5c7-0927309852
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-02-01-fefe9fc5c7-0927309852
+    tag: semu/manybugs:php-2011-02-01-fefe9fc5c7-0927309852
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -93,9 +93,9 @@ blueprints:
       bug_revision: 01745fa657
       fix_revision: 1f49902999
       scenario: php-bug-2011-02-01-01745fa657-1f49902999
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-02-01-01745fa657-1f49902999
+    tag: semu/manybugs:php-2011-02-01-01745fa657-1f49902999
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -103,9 +103,9 @@ blueprints:
       bug_revision: a6c0a4e474
       fix_revision: 1a8b87d2c5
       scenario: php-bug-2011-01-24-a6c0a4e474-1a8b87d2c5
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-01-24-a6c0a4e474-1a8b87d2c5
+    tag: semu/manybugs:php-2011-01-24-a6c0a4e474-1a8b87d2c5
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -113,9 +113,9 @@ blueprints:
       bug_revision: d890ece3fc
       fix_revision: 6e74d95f34
       scenario: php-bug-2011-03-11-d890ece3fc-6e74d95f34
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-03-11-d890ece3fc-6e74d95f34
+    tag: semu/manybugs:php-2011-03-11-d890ece3fc-6e74d95f34
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -123,9 +123,9 @@ blueprints:
       bug_revision: 5087b0ee42
       fix_revision: ac631dd580
       scenario: php-bug-2011-12-06-5087b0ee42-ac631dd580
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-12-06-5087b0ee42-ac631dd580
+    tag: semu/manybugs:php-2011-12-06-5087b0ee42-ac631dd580
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -133,9 +133,9 @@ blueprints:
       bug_revision: 11941b3fd2
       fix_revision: 821d7169d9
       scenario: php-bug-2011-04-19-11941b3fd2-821d7169d9
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-04-19-11941b3fd2-821d7169d9
+    tag: semu/manybugs:php-2011-04-19-11941b3fd2-821d7169d9
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -143,9 +143,9 @@ blueprints:
       bug_revision: 1f78177e2b
       fix_revision: d4ae4e79db
       scenario: php-bug-2011-10-16-1f78177e2b-d4ae4e79db
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-10-16-1f78177e2b-d4ae4e79db
+    tag: semu/manybugs:php-2011-10-16-1f78177e2b-d4ae4e79db
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -153,9 +153,9 @@ blueprints:
       bug_revision: 7c2946f80e
       fix_revision: dc6ecd21ee
       scenario: php-bug-2011-11-26-7c2946f80e-dc6ecd21ee
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-11-26-7c2946f80e-dc6ecd21ee
+    tag: semu/manybugs:php-2011-11-26-7c2946f80e-dc6ecd21ee
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -163,9 +163,9 @@ blueprints:
       bug_revision: 7c6310852e
       fix_revision: 3571c955b5
       scenario: php-bug-2011-01-06-7c6310852e-3571c955b5
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-01-09-7c6310852e-3571c955b5
+    tag: semu/manybugs:php-2011-01-09-7c6310852e-3571c955b5
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -173,9 +173,9 @@ blueprints:
       bug_revision: 55acfdf7bd
       fix_revision: 3c7a573a2c
       scenario: php-bug-2011-11-16-55acfdf7bd-3c7a573a2c
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-11-16-55acfdf7bd-3c7a573a2c
+    tag: semu/manybugs:php-2011-11-16-55acfdf7bd-3c7a573a2c
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -183,9 +183,9 @@ blueprints:
       bug_revision: bda5ea7111
       fix_revision: 60dfd64bf2
       scenario: php-bug-2012-03-04-bda5ea7111-60dfd64bf2
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-03-04-bda5ea7111-60dfd64bf2
+    tag: semu/manybugs:php-2012-03-04-bda5ea7111-60dfd64bf2
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -193,9 +193,9 @@ blueprints:
       bug_revision: 147382033a
       fix_revision: 5bb0a44e06
       scenario: php-bug-2011-01-29-147382033a-5bb0a44e06
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-01-29-147382033a-5bb0a44e06
+    tag: semu/manybugs:php-2011-01-29-147382033a-5bb0a44e06
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -203,9 +203,9 @@ blueprints:
       bug_revision: 38b549ea2f
       fix_revision: 1923ecfe25
       scenario: php-bug-2012-02-25-38b549ea2f-1923ecfe25
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-02-25-38b549ea2f-1923ecfe25
+    tag: semu/manybugs:php-2012-02-25-38b549ea2f-1923ecfe25
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -213,9 +213,9 @@ blueprints:
       bug_revision: c4eb5f2387
       fix_revision: 2e5d5e5ac6
       scenario: php-bug-2011-10-31-c4eb5f2387-2e5d5e5ac6
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-10-31-c4eb5f2387-2e5d5e5ac6
+    tag: semu/manybugs:php-2011-10-31-c4eb5f2387-2e5d5e5ac6
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -223,9 +223,9 @@ blueprints:
       bug_revision: 735efbdd04
       fix_revision: e0f781f496
       scenario: php-bug-2011-11-01-735efbdd04-e0f781f496
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-11-01-735efbdd04-e0f781f496
+    tag: semu/manybugs:php-2011-11-01-735efbdd04-e0f781f496
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -233,9 +233,9 @@ blueprints:
       bug_revision: 5d0c948296
       fix_revision: 8deb11c0c3
       scenario: php-bug-2011-03-19-5d0c948296-8deb11c0c3
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-03-19-5d0c948296-8deb11c0c3
+    tag: semu/manybugs:php-2011-03-19-5d0c948296-8deb11c0c3
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -243,9 +243,9 @@ blueprints:
       bug_revision: c50b3d7add
       fix_revision: 426f31e790
       scenario: php-bug-2011-02-05-c50b3d7add-426f31e790
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-02-05-c50b3d7add-426f31e790
+    tag: semu/manybugs:php-2011-02-05-c50b3d7add-426f31e790
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -253,9 +253,9 @@ blueprints:
       bug_revision: 23e65a9dcc
       fix_revision: e6ec1fb166
       scenario: php-bug-2012-03-10-23e65a9dcc-e6ec1fb166
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-03-10-23e65a9dcc-e6ec1fb166
+    tag: semu/manybugs:php-2012-03-10-23e65a9dcc-e6ec1fb166
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -263,9 +263,9 @@ blueprints:
       bug_revision: f5a9e17f9c
       fix_revision: 964f44a280
       scenario: php-bug-2011-05-21-f5a9e17f9c-964f44a280
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-05-21-f5a9e17f9c-964f44a280
+    tag: semu/manybugs:php-2011-05-21-f5a9e17f9c-964f44a280
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -273,9 +273,9 @@ blueprints:
       bug_revision: 0cb26060af
       fix_revision: eefefddc0e
       scenario: php-bug-2012-02-20-0cb26060af-eefefddc0e
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-02-20-0cb26060af-eefefddc0e
+    tag: semu/manybugs:php-2012-02-20-0cb26060af-eefefddc0e
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -283,9 +283,9 @@ blueprints:
       bug_revision: '3954743813'
       fix_revision: d4f05fbffc
       scenario: php-bug-2012-03-11-3954743813-d4f05fbffc
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-03-11-3954743813-d4f05fbffc
+    tag: semu/manybugs:php-2012-03-11-3954743813-d4f05fbffc
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -293,9 +293,9 @@ blueprints:
       bug_revision: f912a2d087
       fix_revision: b84967d3e2
       scenario: php-bug-2011-02-11-f912a2d087-b84967d3e2
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-02-11-f912a2d087-b84967d3e2
+    tag: semu/manybugs:php-2011-02-11-f912a2d087-b84967d3e2
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -303,9 +303,9 @@ blueprints:
       bug_revision: d2881adcbc
       fix_revision: 4591498df7
       scenario: php-bug-2011-11-01-d2881adcbc-4591498df7
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-11-01-d2881adcbc-4591498df7
+    tag: semu/manybugs:php-2011-11-01-d2881adcbc-4591498df7
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -313,9 +313,9 @@ blueprints:
       bug_revision: 3acdca4703
       fix_revision: c2fe893985
       scenario: php-bug-2011-03-26-3acdca4703-c2fe893985
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-03-26-3acdca4703-c2fe893985
+    tag: semu/manybugs:php-2011-03-26-3acdca4703-c2fe893985
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -323,9 +323,9 @@ blueprints:
       bug_revision: c1a4a36c14
       fix_revision: 5921e73a37
       scenario: php-bug-2011-10-30-c1a4a36c14-5921e73a37
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-10-30-c1a4a36c14-5921e73a37
+    tag: semu/manybugs:php-2011-10-30-c1a4a36c14-5921e73a37
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -333,9 +333,9 @@ blueprints:
       bug_revision: '2568672691'
       fix_revision: 13ba2da5f6
       scenario: php-bug-2011-11-15-2568672691-13ba2da5f6
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-11-15-2568672691-13ba2da5f6
+    tag: semu/manybugs:php-2011-11-15-2568672691-13ba2da5f6
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -343,9 +343,9 @@ blueprints:
       bug_revision: eb0dd2b8ab
       fix_revision: 9bbc114b59
       scenario: php-bug-2011-02-16-eb0dd2b8ab-9bbc114b59
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-02-16-eb0dd2b8ab-9bbc114b59
+    tag: semu/manybugs:php-2011-02-16-eb0dd2b8ab-9bbc114b59
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -353,9 +353,9 @@ blueprints:
       bug_revision: 9de5b6dc7c
       fix_revision: 4dc8b1ad11
       scenario: php-bug-2012-01-30-9de5b6dc7c-4dc8b1ad11
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-01-30-9de5b6dc7c-4dc8b1ad11
+    tag: semu/manybugs:php-2012-01-30-9de5b6dc7c-4dc8b1ad11
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -363,9 +363,9 @@ blueprints:
       bug_revision: 7aefbf70a8
       fix_revision: efc94f3115
       scenario: php-bug-2012-03-12-7aefbf70a8-efc94f3115
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-03-12-7aefbf70a8-efc94f3115
+    tag: semu/manybugs:php-2012-03-12-7aefbf70a8-efc94f3115
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -373,9 +373,9 @@ blueprints:
       bug_revision: 77ed819430
       fix_revision: efcb9a71cd
       scenario: php-bug-2011-04-07-77ed819430-efcb9a71cd
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-04-07-77ed819430-efcb9a71cd
+    tag: semu/manybugs:php-2011-04-07-77ed819430-efcb9a71cd
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -383,9 +383,9 @@ blueprints:
       bug_revision: bc049ccb62
       fix_revision: a6c0a4e474
       scenario: php-bug-2011-01-23-bc049ccb62-a6c0a4e474
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-01-23-bc049ccb62-a6c0a4e474
+    tag: semu/manybugs:php-2011-01-23-bc049ccb62-a6c0a4e474
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -393,9 +393,9 @@ blueprints:
       bug_revision: 2a6968e43a
       fix_revision: ecb9d8019c
       scenario: php-bug-2011-02-21-2a6968e43a-ecb9d8019c
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-02-21-2a6968e43a-ecb9d8019c
+    tag: semu/manybugs:php-2011-02-21-2a6968e43a-ecb9d8019c
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -403,9 +403,9 @@ blueprints:
       bug_revision: ff63c09e6f
       fix_revision: '6672171672'
       scenario: php-bug-2012-02-08-ff63c09e6f-6672171672
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-02-08-ff63c09e6f-6672171672
+    tag: semu/manybugs:php-2012-02-08-ff63c09e6f-6672171672
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -413,9 +413,9 @@ blueprints:
       bug_revision: e65d361fde
       fix_revision: 1d984a7ffd
       scenario: php-bug-2011-02-27-e65d361fde-1d984a7ffd
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-02-27-e65d361fde-1d984a7ffd
+    tag: semu/manybugs:php-2011-02-27-e65d361fde-1d984a7ffd
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -423,9 +423,9 @@ blueprints:
       bug_revision: 465ffa7fa2
       fix_revision: c4a8866abb
       scenario: php-bug-2011-04-12-465ffa7fa2-c4a8866abb
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-04-12-465ffa7fa2-c4a8866abb
+    tag: semu/manybugs:php-2011-04-12-465ffa7fa2-c4a8866abb
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -433,9 +433,9 @@ blueprints:
       bug_revision: 7c6310852e
       fix_revision: 478e5d1dd0
       scenario: php-bug-2011-01-09-7c6310852e-478e5d1dd0
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-01-09-7c6310852e-478e5d1dd0
+    tag: semu/manybugs:php-2011-01-09-7c6310852e-478e5d1dd0
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -443,9 +443,9 @@ blueprints:
       bug_revision: 5bb0a44e06
       fix_revision: 1e91069eb4
       scenario: php-bug-2011-01-30-5bb0a44e06-1e91069eb4
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-01-30-5bb0a44e06-1e91069eb4
+    tag: semu/manybugs:php-2011-01-30-5bb0a44e06-1e91069eb4
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -453,9 +453,9 @@ blueprints:
       bug_revision: 53204a26d2
       fix_revision: 118695a4ea
       scenario: php-bug-2011-04-27-53204a26d2-118695a4ea
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-04-27-53204a26d2-118695a4ea
+    tag: semu/manybugs:php-2011-04-27-53204a26d2-118695a4ea
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -463,9 +463,9 @@ blueprints:
       bug_revision: 63673a533f
       fix_revision: 2adf58cfcf
       scenario: php-bug-2011-03-23-63673a533f-2adf58cfcf
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-03-23-63673a533f-2adf58cfcf
+    tag: semu/manybugs:php-2011-03-23-63673a533f-2adf58cfcf
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -473,9 +473,9 @@ blueprints:
       bug_revision: c1d520d19d
       fix_revision: 9b86852d6e
       scenario: php-bug-2011-11-02-c1d520d19d-9b86852d6e
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-11-02-c1d520d19d-9b86852d6e
+    tag: semu/manybugs:php-2011-11-02-c1d520d19d-9b86852d6e
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -483,9 +483,9 @@ blueprints:
       bug_revision: 0a91432828
       fix_revision: 032bbc3164
       scenario: php-bug-2012-02-18-0a91432828-032bbc3164
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-02-18-0a91432828-032bbc3164
+    tag: semu/manybugs:php-2012-02-18-0a91432828-032bbc3164
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -493,9 +493,9 @@ blueprints:
       bug_revision: b60f6774dc
       fix_revision: 1056c57fa9
       scenario: php-bug-2011-05-24-b60f6774dc-1056c57fa9
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-05-24-b60f6774dc-1056c57fa9
+    tag: semu/manybugs:php-2011-05-24-b60f6774dc-1056c57fa9
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -503,9 +503,9 @@ blueprints:
       bug_revision: d8b312845c
       fix_revision: dc27324dd9
       scenario: php-bug-2012-01-29-d8b312845c-dc27324dd9
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-01-29-d8b312845c-dc27324dd9
+    tag: semu/manybugs:php-2012-01-29-d8b312845c-dc27324dd9
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -513,9 +513,9 @@ blueprints:
       bug_revision: 8138f7de40
       fix_revision: 3acdca4703
       scenario: php-bug-2011-03-25-8138f7de40-3acdca4703
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-03-25-8138f7de40-3acdca4703
+    tag: semu/manybugs:php-2011-03-25-8138f7de40-3acdca4703
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -523,9 +523,9 @@ blueprints:
       bug_revision: 583292ab22
       fix_revision: d74a258f24
       scenario: php-bug-2012-01-13-583292ab22-d74a258f24
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-01-13-583292ab22-d74a258f24
+    tag: semu/manybugs:php-2012-01-13-583292ab22-d74a258f24
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -533,9 +533,9 @@ blueprints:
       bug_revision: 3efc9f2f78
       fix_revision: 2e19cccad7
       scenario: php-bug-2012-03-22-3efc9f2f78-2e19cccad7
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-03-22-3efc9f2f78-2e19cccad7
+    tag: semu/manybugs:php-2012-03-22-3efc9f2f78-2e19cccad7
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -543,9 +543,9 @@ blueprints:
       bug_revision: ecc6c335c5
       fix_revision: b548293b99
       scenario: php-bug-2011-11-22-ecc6c335c5-b548293b99
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-11-22-ecc6c335c5-b548293b99
+    tag: semu/manybugs:php-2011-11-22-ecc6c335c5-b548293b99
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -553,9 +553,9 @@ blueprints:
       bug_revision: 36df53421e
       fix_revision: f32760bd40
       scenario: php-bug-2012-01-16-36df53421e-f32760bd40
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-01-16-36df53421e-f32760bd40
+    tag: semu/manybugs:php-2012-01-16-36df53421e-f32760bd40
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -563,9 +563,9 @@ blueprints:
       bug_revision: 730b54a374
       fix_revision: 1953161b8c
       scenario: php-bug-2012-03-02-730b54a374-1953161b8c
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-03-02-730b54a374-1953161b8c
+    tag: semu/manybugs:php-2012-03-02-730b54a374-1953161b8c
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -573,9 +573,9 @@ blueprints:
       bug_revision: c3e56a152c
       fix_revision: 3598185a74
       scenario: php-bug-2011-11-08-c3e56a152c-3598185a74
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-11-08-c3e56a152c-3598185a74
+    tag: semu/manybugs:php-2011-11-08-c3e56a152c-3598185a74
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -583,9 +583,9 @@ blueprints:
       bug_revision: c1322d2505
       fix_revision: cfa9c90b20
       scenario: php-bug-2012-02-25-c1322d2505-cfa9c90b20
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-02-25-c1322d2505-cfa9c90b20
+    tag: semu/manybugs:php-2012-02-25-c1322d2505-cfa9c90b20
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -593,9 +593,9 @@ blueprints:
       bug_revision: f32760bd40
       fix_revision: 032d140fd6
       scenario: php-bug-2012-01-16-f32760bd40-032d140fd6
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-01-16-f32760bd40-032d140fd6
+    tag: semu/manybugs:php-2012-01-16-f32760bd40-032d140fd6
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -603,9 +603,9 @@ blueprints:
       bug_revision: eca88d3064
       fix_revision: db0888dfc1
       scenario: php-bug-2011-11-23-eca88d3064-db0888dfc1
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-11-23-eca88d3064-db0888dfc1
+    tag: semu/manybugs:php-2011-11-23-eca88d3064-db0888dfc1
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -613,9 +613,9 @@ blueprints:
       bug_revision: 7888715e73
       fix_revision: ff48763f4b
       scenario: php-bug-2011-11-05-7888715e73-ff48763f4b
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-11-05-7888715e73-ff48763f4b
+    tag: semu/manybugs:php-2011-11-05-7888715e73-ff48763f4b
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -623,9 +623,9 @@ blueprints:
       bug_revision: e76c1cc03c
       fix_revision: ebddf8a975
       scenario: php-bug-2012-01-17-e76c1cc03c-ebddf8a975
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-01-17-e76c1cc03c-ebddf8a975
+    tag: semu/manybugs:php-2012-01-17-e76c1cc03c-ebddf8a975
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -633,9 +633,9 @@ blueprints:
       bug_revision: 80dd931d40
       fix_revision: 7c3177e5ab
       scenario: php-bug-2012-01-01-80dd931d40-7c3177e5ab
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-01-01-80dd931d40-7c3177e5ab
+    tag: semu/manybugs:php-2012-01-01-80dd931d40-7c3177e5ab
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -643,9 +643,9 @@ blueprints:
       bug_revision: 544e36dfff
       fix_revision: acaf9c5227
       scenario: php-bug-2012-01-27-544e36dfff-acaf9c5227
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-01-27-544e36dfff-acaf9c5227
+    tag: semu/manybugs:php-2012-01-27-544e36dfff-acaf9c5227
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -653,9 +653,9 @@ blueprints:
       bug_revision: 6a42b41c3d
       fix_revision: 5063a77128
       scenario: php-bug-2011-11-08-6a42b41c3d-5063a77128
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-11-08-6a42b41c3d-5063a77128
+    tag: semu/manybugs:php-2011-11-08-6a42b41c3d-5063a77128
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -663,9 +663,9 @@ blueprints:
       bug_revision: 3d898cfa3f
       fix_revision: af92365239
       scenario: php-bug-2012-02-12-3d898cfa3f-af92365239
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-02-12-3d898cfa3f-af92365239
+    tag: semu/manybugs:php-2012-02-12-3d898cfa3f-af92365239
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -673,9 +673,9 @@ blueprints:
       bug_revision: 7c3177e5ab
       fix_revision: e2a2ed348f
       scenario: php-bug-2012-01-01-7c3177e5ab-e2a2ed348f
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-01-01-7c3177e5ab-e2a2ed348f
+    tag: semu/manybugs:php-2012-01-01-7c3177e5ab-e2a2ed348f
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -683,9 +683,9 @@ blueprints:
       bug_revision: 70075bc84c
       fix_revision: 5a8c917c37
       scenario: php-bug-2011-04-02-70075bc84c-5a8c917c37
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-04-02-70075bc84c-5a8c917c37
+    tag: semu/manybugs:php-2011-04-02-70075bc84c-5a8c917c37
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -693,9 +693,9 @@ blueprints:
       bug_revision: 0ac9b9b0ae
       fix_revision: cacf363957
       scenario: php-bug-2011-11-08-0ac9b9b0ae-cacf363957
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-11-08-0ac9b9b0ae-cacf363957
+    tag: semu/manybugs:php-2011-11-08-0ac9b9b0ae-cacf363957
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -703,9 +703,9 @@ blueprints:
       bug_revision: de50e98a07
       fix_revision: 8d520d6296
       scenario: php-bug-2011-11-02-de50e98a07-8d520d6296
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-11-02-de50e98a07-8d520d6296
+    tag: semu/manybugs:php-2011-11-02-de50e98a07-8d520d6296
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -713,9 +713,9 @@ blueprints:
       bug_revision: 1f49902999
       fix_revision: f2329f1f4b
       scenario: php-bug-2011-02-01-1f49902999-f2329f1f4b
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-02-01-1f49902999-f2329f1f4b
+    tag: semu/manybugs:php-2011-02-01-1f49902999-f2329f1f4b
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -723,9 +723,9 @@ blueprints:
       bug_revision: 438a30f1e7
       fix_revision: 7337a901b7
       scenario: php-bug-2012-03-12-438a30f1e7-7337a901b7
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-03-12-438a30f1e7-7337a901b7
+    tag: semu/manybugs:php-2012-03-12-438a30f1e7-7337a901b7
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -733,9 +733,9 @@ blueprints:
       bug_revision: 2034e14341
       fix_revision: 7f2937223d
       scenario: php-bug-2011-03-20-2034e14341-7f2937223d
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-03-20-2034e14341-7f2937223d
+    tag: semu/manybugs:php-2011-03-20-2034e14341-7f2937223d
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -743,9 +743,9 @@ blueprints:
       bug_revision: efcb9a71cd
       fix_revision: 6f3148db81
       scenario: php-bug-2011-04-08-efcb9a71cd-6f3148db81
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-04-08-efcb9a71cd-6f3148db81
+    tag: semu/manybugs:php-2011-04-08-efcb9a71cd-6f3148db81
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -753,9 +753,9 @@ blueprints:
       bug_revision: 0de2e61cab
       fix_revision: 991ba13174
       scenario: php-bug-2011-03-22-0de2e61cab-991ba13174
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-03-22-0de2e61cab-991ba13174
+    tag: semu/manybugs:php-2011-03-22-0de2e61cab-991ba13174
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -763,9 +763,9 @@ blueprints:
       bug_revision: 9da01ac6b6
       fix_revision: 7334dfd7eb
       scenario: php-bug-2011-11-04-9da01ac6b6-7334dfd7eb
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-11-04-9da01ac6b6-7334dfd7eb
+    tag: semu/manybugs:php-2011-11-04-9da01ac6b6-7334dfd7eb
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -773,9 +773,9 @@ blueprints:
       bug_revision: 0a1cc5f01c
       fix_revision: 05c5c8958e
       scenario: php-bug-2011-10-15-0a1cc5f01c-05c5c8958e
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-10-15-0a1cc5f01c-05c5c8958e
+    tag: semu/manybugs:php-2011-10-15-0a1cc5f01c-05c5c8958e
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -783,9 +783,9 @@ blueprints:
       bug_revision: eeba0b5681
       fix_revision: d3b20b4058
       scenario: php-bug-2011-11-19-eeba0b5681-d3b20b4058
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-11-19-eeba0b5681-d3b20b4058
+    tag: semu/manybugs:php-2011-11-19-eeba0b5681-d3b20b4058
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -793,9 +793,9 @@ blueprints:
       bug_revision: b3ad0b7af7
       fix_revision: 1d6c98a136
       scenario: php-bug-2011-12-04-b3ad0b7af7-1d6c98a136
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-12-04-b3ad0b7af7-1d6c98a136
+    tag: semu/manybugs:php-2011-12-04-b3ad0b7af7-1d6c98a136
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -803,9 +803,9 @@ blueprints:
       bug_revision: b21f62eb2d
       fix_revision: 2a6968e43a
       scenario: php-bug-2011-02-21-b21f62eb2d-2a6968e43a
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-02-21-b21f62eb2d-2a6968e43a
+    tag: semu/manybugs:php-2011-02-21-b21f62eb2d-2a6968e43a
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -813,9 +813,9 @@ blueprints:
       bug_revision: ceac9dc490
       fix_revision: 9b0d73af1d
       scenario: php-bug-2011-11-01-ceac9dc490-9b0d73af1d
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-11-01-ceac9dc490-9b0d73af1d
+    tag: semu/manybugs:php-2011-11-01-ceac9dc490-9b0d73af1d
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -823,9 +823,9 @@ blueprints:
       bug_revision: 236120d80e
       fix_revision: fb37f3b20d
       scenario: php-bug-2011-11-15-236120d80e-fb37f3b20d
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-11-15-236120d80e-fb37f3b20d
+    tag: semu/manybugs:php-2011-11-15-236120d80e-fb37f3b20d
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -833,9 +833,9 @@ blueprints:
       bug_revision: 032d140fd6
       fix_revision: 877f97cde1
       scenario: php-bug-2012-01-17-032d140fd6-877f97cde1
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-01-17-032d140fd6-877f97cde1
+    tag: semu/manybugs:php-2012-01-17-032d140fd6-877f97cde1
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -843,9 +843,9 @@ blueprints:
       bug_revision: db63456a8d
       fix_revision: 3dc9f0abe6
       scenario: php-bug-2011-12-17-db63456a8d-3dc9f0abe6
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-12-17-db63456a8d-3dc9f0abe6
+    tag: semu/manybugs:php-2011-12-17-db63456a8d-3dc9f0abe6
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -853,9 +853,9 @@ blueprints:
       bug_revision: beda5efd41
       fix_revision: 622412d8e6
       scenario: php-bug-2011-12-18-beda5efd41-622412d8e6
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-12-18-beda5efd41-622412d8e6
+    tag: semu/manybugs:php-2011-12-18-beda5efd41-622412d8e6
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -863,9 +863,9 @@ blueprints:
       bug_revision: 793cfe1376
       fix_revision: 109b8e99e0
       scenario: php-bug-2011-02-04-793cfe1376-109b8e99e0
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-02-04-793cfe1376-109b8e99e0
+    tag: semu/manybugs:php-2011-02-04-793cfe1376-109b8e99e0
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -873,9 +873,9 @@ blueprints:
       bug_revision: 86efc8e55e
       fix_revision: d1d61ce612
       scenario: php-bug-2011-02-14-86efc8e55e-d1d61ce612
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-02-14-86efc8e55e-d1d61ce612
+    tag: semu/manybugs:php-2011-02-14-86efc8e55e-d1d61ce612
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -883,9 +883,9 @@ blueprints:
       bug_revision: 95388b7cda
       fix_revision: b9b1fb1827
       scenario: php-bug-2011-01-18-95388b7cda-b9b1fb1827
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-01-18-95388b7cda-b9b1fb1827
+    tag: semu/manybugs:php-2011-01-18-95388b7cda-b9b1fb1827
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -893,9 +893,9 @@ blueprints:
       bug_revision: 2e5d5e5ac6
       fix_revision: b5f15ef561
       scenario: php-bug-2011-10-31-2e5d5e5ac6-b5f15ef561
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-10-31-2e5d5e5ac6-b5f15ef561
+    tag: semu/manybugs:php-2011-10-31-2e5d5e5ac6-b5f15ef561
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -903,9 +903,9 @@ blueprints:
       bug_revision: 0169020e49
       fix_revision: cdc512afb3
       scenario: php-bug-2012-03-08-0169020e49-cdc512afb3
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-03-08-0169020e49-cdc512afb3
+    tag: semu/manybugs:php-2012-03-08-0169020e49-cdc512afb3
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -913,9 +913,9 @@ blueprints:
       bug_revision: 187eb235fe
       fix_revision: 2e25ec9eb7
       scenario: php-bug-2011-04-06-187eb235fe-2e25ec9eb7
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-04-06-187eb235fe-2e25ec9eb7
+    tag: semu/manybugs:php-2011-04-06-187eb235fe-2e25ec9eb7
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -923,9 +923,9 @@ blueprints:
       bug_revision: 3b1ce022f1
       fix_revision: c2ede9a00a
       scenario: php-bug-2011-11-25-3b1ce022f1-c2ede9a00a
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-11-25-3b1ce022f1-c2ede9a00a
+    tag: semu/manybugs:php-2011-11-25-3b1ce022f1-c2ede9a00a
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -933,9 +933,9 @@ blueprints:
       bug_revision: 1e6a82a1cf
       fix_revision: dfa08dc325
       scenario: php-bug-2011-12-04-1e6a82a1cf-dfa08dc325
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-12-04-1e6a82a1cf-dfa08dc325
+    tag: semu/manybugs:php-2011-12-04-1e6a82a1cf-dfa08dc325
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -943,9 +943,9 @@ blueprints:
       bug_revision: 356b619487
       fix_revision: a3a5157286
       scenario: php-bug-2011-02-19-356b619487-a3a5157286
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-02-19-356b619487-a3a5157286
+    tag: semu/manybugs:php-2011-02-19-356b619487-a3a5157286
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -953,9 +953,9 @@ blueprints:
       bug_revision: 74343ca506
       fix_revision: 52c36e60c4
       scenario: php-bug-2011-12-10-74343ca506-52c36e60c4
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-12-10-74343ca506-52c36e60c4
+    tag: semu/manybugs:php-2011-12-10-74343ca506-52c36e60c4
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -963,9 +963,9 @@ blueprints:
       bug_revision: 9c285fddbb
       fix_revision: 93f65cdeac
       scenario: php-bug-2011-04-30-9c285fddbb-93f65cdeac
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-04-30-9c285fddbb-93f65cdeac
+    tag: semu/manybugs:php-2011-04-30-9c285fddbb-93f65cdeac
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -973,9 +973,9 @@ blueprints:
       bug_revision: 11efb7295e
       fix_revision: f7b7b6aa9e
       scenario: php-bug-2011-03-27-11efb7295e-f7b7b6aa9e
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-03-27-11efb7295e-f7b7b6aa9e
+    tag: semu/manybugs:php-2011-03-27-11efb7295e-f7b7b6aa9e
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -983,9 +983,9 @@ blueprints:
       bug_revision: fcbfbea8d2
       fix_revision: c1e510aea8
       scenario: php-bug-2011-11-11-fcbfbea8d2-c1e510aea8
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-11-11-fcbfbea8d2-c1e510aea8
+    tag: semu/manybugs:php-2011-11-11-fcbfbea8d2-c1e510aea8
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -993,9 +993,9 @@ blueprints:
       bug_revision: d3274b7f20
       fix_revision: 77ed819430
       scenario: php-bug-2011-04-07-d3274b7f20-77ed819430
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-04-07-d3274b7f20-77ed819430
+    tag: semu/manybugs:php-2011-04-07-d3274b7f20-77ed819430
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -1003,9 +1003,9 @@ blueprints:
       bug_revision: 60dfd64bf2
       fix_revision: 34fe62619d
       scenario: php-bug-2012-03-04-60dfd64bf2-34fe62619d
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-03-04-60dfd64bf2-34fe62619d
+    tag: semu/manybugs:php-2012-03-04-60dfd64bf2-34fe62619d
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -1013,9 +1013,9 @@ blueprints:
       bug_revision: 2191af9546
       fix_revision: b83e243c23
       scenario: php-bug-2011-03-27-2191af9546-b83e243c23
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-03-27-2191af9546-b83e243c23
+    tag: semu/manybugs:php-2011-03-27-2191af9546-b83e243c23
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -1023,9 +1023,9 @@ blueprints:
       bug_revision: eeba0b5681
       fix_revision: f330c8ab4e
       scenario: php-bug-2011-11-19-eeba0b5681-f330c8ab4e
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2011-11-19-eeba0b5681-f330c8ab4e
+    tag: semu/manybugs:php-2011-11-19-eeba0b5681-f330c8ab4e
     type: docker
   - arguments:
       autoconf: '2.59'
@@ -1033,9 +1033,9 @@ blueprints:
       bug_revision: 53e3467ff2
       fix_revision: 9a460497da
       scenario: php-bug-2012-03-19-53e3467ff2-9a460497da
-    depends-on: squareslab/manybugs:php
+    depends-on: semu/manybugs:php
     file: Dockerfile.bug
-    tag: squareslab/manybugs:php-2012-03-19-53e3467ff2-9a460497da
+    tag: semu/manybugs:php-2012-03-19-53e3467ff2-9a460497da
     type: docker
 
 bugs:
@@ -1043,7 +1043,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-04-06-18d71a6f59-187eb235fe
+    image: semu/manybugs:php-2011-04-06-18d71a6f59-187eb235fe
     languages:
     - c
     name: manybugs:php:2011-04-06-18d71a6f59-187eb235fe
@@ -1058,7 +1058,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-03-08-d54e6ce832-23e65a9dcc
+    image: semu/manybugs:php-2012-03-08-d54e6ce832-23e65a9dcc
     languages:
     - c
     name: manybugs:php:2012-03-08-d54e6ce832-23e65a9dcc
@@ -1073,7 +1073,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-05-17-453c954f8a-daecb2c0f4
+    image: semu/manybugs:php-2011-05-17-453c954f8a-daecb2c0f4
     languages:
     - c
     name: manybugs:php:2011-05-17-453c954f8a-daecb2c0f4
@@ -1088,7 +1088,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-03-06-6237456cae-5e80c05deb
+    image: semu/manybugs:php-2012-03-06-6237456cae-5e80c05deb
     languages:
     - c
     name: manybugs:php:2012-03-06-6237456cae-5e80c05deb
@@ -1103,7 +1103,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-11-19-51a4ae6576-bc810a443d
+    image: semu/manybugs:php-2011-11-19-51a4ae6576-bc810a443d
     languages:
     - c
     name: manybugs:php:2011-11-19-51a4ae6576-bc810a443d
@@ -1118,7 +1118,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-04-09-db01e840c2-09b990f499
+    image: semu/manybugs:php-2011-04-09-db01e840c2-09b990f499
     languages:
     - c
     name: manybugs:php:2011-04-09-db01e840c2-09b990f499
@@ -1133,7 +1133,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-05-13-db0c957f02-8ba00176f1
+    image: semu/manybugs:php-2011-05-13-db0c957f02-8ba00176f1
     languages:
     - c
     name: manybugs:php:2011-05-13-db0c957f02-8ba00176f1
@@ -1148,7 +1148,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-02-01-fefe9fc5c7-0927309852
+    image: semu/manybugs:php-2011-02-01-fefe9fc5c7-0927309852
     languages:
     - c
     name: manybugs:php:2011-02-01-fefe9fc5c7-0927309852
@@ -1163,7 +1163,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-02-01-01745fa657-1f49902999
+    image: semu/manybugs:php-2011-02-01-01745fa657-1f49902999
     languages:
     - c
     name: manybugs:php:2011-02-01-01745fa657-1f49902999
@@ -1178,7 +1178,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-01-24-a6c0a4e474-1a8b87d2c5
+    image: semu/manybugs:php-2011-01-24-a6c0a4e474-1a8b87d2c5
     languages:
     - c
     name: manybugs:php:2011-01-24-a6c0a4e474-1a8b87d2c5
@@ -1193,7 +1193,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-03-11-d890ece3fc-6e74d95f34
+    image: semu/manybugs:php-2011-03-11-d890ece3fc-6e74d95f34
     languages:
     - c
     name: manybugs:php:2011-03-11-d890ece3fc-6e74d95f34
@@ -1208,7 +1208,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-12-06-5087b0ee42-ac631dd580
+    image: semu/manybugs:php-2011-12-06-5087b0ee42-ac631dd580
     languages:
     - c
     name: manybugs:php:2011-12-06-5087b0ee42-ac631dd580
@@ -1223,7 +1223,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-04-19-11941b3fd2-821d7169d9
+    image: semu/manybugs:php-2011-04-19-11941b3fd2-821d7169d9
     languages:
     - c
     name: manybugs:php:2011-04-19-11941b3fd2-821d7169d9
@@ -1238,7 +1238,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-10-16-1f78177e2b-d4ae4e79db
+    image: semu/manybugs:php-2011-10-16-1f78177e2b-d4ae4e79db
     languages:
     - c
     name: manybugs:php:2011-10-16-1f78177e2b-d4ae4e79db
@@ -1253,7 +1253,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-11-26-7c2946f80e-dc6ecd21ee
+    image: semu/manybugs:php-2011-11-26-7c2946f80e-dc6ecd21ee
     languages:
     - c
     name: manybugs:php:2011-11-26-7c2946f80e-dc6ecd21ee
@@ -1268,7 +1268,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-01-09-7c6310852e-3571c955b5
+    image: semu/manybugs:php-2011-01-09-7c6310852e-3571c955b5
     languages:
     - c
     name: manybugs:php:2011-01-06-7c6310852e-3571c955b5
@@ -1283,7 +1283,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-11-16-55acfdf7bd-3c7a573a2c
+    image: semu/manybugs:php-2011-11-16-55acfdf7bd-3c7a573a2c
     languages:
     - c
     name: manybugs:php:2011-11-16-55acfdf7bd-3c7a573a2c
@@ -1298,7 +1298,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-03-04-bda5ea7111-60dfd64bf2
+    image: semu/manybugs:php-2012-03-04-bda5ea7111-60dfd64bf2
     languages:
     - c
     name: manybugs:php:2012-03-04-bda5ea7111-60dfd64bf2
@@ -1313,7 +1313,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-01-29-147382033a-5bb0a44e06
+    image: semu/manybugs:php-2011-01-29-147382033a-5bb0a44e06
     languages:
     - c
     name: manybugs:php:2011-01-29-147382033a-5bb0a44e06
@@ -1328,7 +1328,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-02-25-38b549ea2f-1923ecfe25
+    image: semu/manybugs:php-2012-02-25-38b549ea2f-1923ecfe25
     languages:
     - c
     name: manybugs:php:2012-02-25-38b549ea2f-1923ecfe25
@@ -1343,7 +1343,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-10-31-c4eb5f2387-2e5d5e5ac6
+    image: semu/manybugs:php-2011-10-31-c4eb5f2387-2e5d5e5ac6
     languages:
     - c
     name: manybugs:php:2011-10-31-c4eb5f2387-2e5d5e5ac6
@@ -1358,7 +1358,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-11-01-735efbdd04-e0f781f496
+    image: semu/manybugs:php-2011-11-01-735efbdd04-e0f781f496
     languages:
     - c
     name: manybugs:php:2011-11-01-735efbdd04-e0f781f496
@@ -1373,7 +1373,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-03-19-5d0c948296-8deb11c0c3
+    image: semu/manybugs:php-2011-03-19-5d0c948296-8deb11c0c3
     languages:
     - c
     name: manybugs:php:2011-03-19-5d0c948296-8deb11c0c3
@@ -1388,7 +1388,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-02-05-c50b3d7add-426f31e790
+    image: semu/manybugs:php-2011-02-05-c50b3d7add-426f31e790
     languages:
     - c
     name: manybugs:php:2011-02-05-c50b3d7add-426f31e790
@@ -1403,7 +1403,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-03-10-23e65a9dcc-e6ec1fb166
+    image: semu/manybugs:php-2012-03-10-23e65a9dcc-e6ec1fb166
     languages:
     - c
     name: manybugs:php:2012-03-10-23e65a9dcc-e6ec1fb166
@@ -1418,7 +1418,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-05-21-f5a9e17f9c-964f44a280
+    image: semu/manybugs:php-2011-05-21-f5a9e17f9c-964f44a280
     languages:
     - c
     name: manybugs:php:2011-05-21-f5a9e17f9c-964f44a280
@@ -1433,7 +1433,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-02-20-0cb26060af-eefefddc0e
+    image: semu/manybugs:php-2012-02-20-0cb26060af-eefefddc0e
     languages:
     - c
     name: manybugs:php:2012-02-20-0cb26060af-eefefddc0e
@@ -1448,7 +1448,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-03-11-3954743813-d4f05fbffc
+    image: semu/manybugs:php-2012-03-11-3954743813-d4f05fbffc
     languages:
     - c
     name: manybugs:php:2012-03-11-3954743813-d4f05fbffc
@@ -1463,7 +1463,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-02-11-f912a2d087-b84967d3e2
+    image: semu/manybugs:php-2011-02-11-f912a2d087-b84967d3e2
     languages:
     - c
     name: manybugs:php:2011-02-11-f912a2d087-b84967d3e2
@@ -1478,7 +1478,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-11-01-d2881adcbc-4591498df7
+    image: semu/manybugs:php-2011-11-01-d2881adcbc-4591498df7
     languages:
     - c
     name: manybugs:php:2011-11-01-d2881adcbc-4591498df7
@@ -1493,7 +1493,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-03-26-3acdca4703-c2fe893985
+    image: semu/manybugs:php-2011-03-26-3acdca4703-c2fe893985
     languages:
     - c
     name: manybugs:php:2011-03-26-3acdca4703-c2fe893985
@@ -1508,7 +1508,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-10-30-c1a4a36c14-5921e73a37
+    image: semu/manybugs:php-2011-10-30-c1a4a36c14-5921e73a37
     languages:
     - c
     name: manybugs:php:2011-10-30-c1a4a36c14-5921e73a37
@@ -1523,7 +1523,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-11-15-2568672691-13ba2da5f6
+    image: semu/manybugs:php-2011-11-15-2568672691-13ba2da5f6
     languages:
     - c
     name: manybugs:php:2011-11-15-2568672691-13ba2da5f6
@@ -1538,7 +1538,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-02-16-eb0dd2b8ab-9bbc114b59
+    image: semu/manybugs:php-2011-02-16-eb0dd2b8ab-9bbc114b59
     languages:
     - c
     name: manybugs:php:2011-02-16-eb0dd2b8ab-9bbc114b59
@@ -1553,7 +1553,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-01-30-9de5b6dc7c-4dc8b1ad11
+    image: semu/manybugs:php-2012-01-30-9de5b6dc7c-4dc8b1ad11
     languages:
     - c
     name: manybugs:php:2012-01-30-9de5b6dc7c-4dc8b1ad11
@@ -1568,7 +1568,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-03-12-7aefbf70a8-efc94f3115
+    image: semu/manybugs:php-2012-03-12-7aefbf70a8-efc94f3115
     languages:
     - c
     name: manybugs:php:2012-03-12-7aefbf70a8-efc94f3115
@@ -1583,7 +1583,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-04-07-77ed819430-efcb9a71cd
+    image: semu/manybugs:php-2011-04-07-77ed819430-efcb9a71cd
     languages:
     - c
     name: manybugs:php:2011-04-07-77ed819430-efcb9a71cd
@@ -1598,7 +1598,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-01-23-bc049ccb62-a6c0a4e474
+    image: semu/manybugs:php-2011-01-23-bc049ccb62-a6c0a4e474
     languages:
     - c
     name: manybugs:php:2011-01-23-bc049ccb62-a6c0a4e474
@@ -1613,7 +1613,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-02-21-2a6968e43a-ecb9d8019c
+    image: semu/manybugs:php-2011-02-21-2a6968e43a-ecb9d8019c
     languages:
     - c
     name: manybugs:php:2011-02-21-2a6968e43a-ecb9d8019c
@@ -1628,7 +1628,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-02-08-ff63c09e6f-6672171672
+    image: semu/manybugs:php-2012-02-08-ff63c09e6f-6672171672
     languages:
     - c
     name: manybugs:php:2012-02-08-ff63c09e6f-6672171672
@@ -1643,7 +1643,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-02-27-e65d361fde-1d984a7ffd
+    image: semu/manybugs:php-2011-02-27-e65d361fde-1d984a7ffd
     languages:
     - c
     name: manybugs:php:2011-02-27-e65d361fde-1d984a7ffd
@@ -1658,7 +1658,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-04-12-465ffa7fa2-c4a8866abb
+    image: semu/manybugs:php-2011-04-12-465ffa7fa2-c4a8866abb
     languages:
     - c
     name: manybugs:php:2011-04-12-465ffa7fa2-c4a8866abb
@@ -1673,7 +1673,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-01-09-7c6310852e-478e5d1dd0
+    image: semu/manybugs:php-2011-01-09-7c6310852e-478e5d1dd0
     languages:
     - c
     name: manybugs:php:2011-01-09-7c6310852e-478e5d1dd0
@@ -1688,7 +1688,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-01-30-5bb0a44e06-1e91069eb4
+    image: semu/manybugs:php-2011-01-30-5bb0a44e06-1e91069eb4
     languages:
     - c
     name: manybugs:php:2011-01-30-5bb0a44e06-1e91069eb4
@@ -1703,7 +1703,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-04-27-53204a26d2-118695a4ea
+    image: semu/manybugs:php-2011-04-27-53204a26d2-118695a4ea
     languages:
     - c
     name: manybugs:php:2011-04-27-53204a26d2-118695a4ea
@@ -1718,7 +1718,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-03-23-63673a533f-2adf58cfcf
+    image: semu/manybugs:php-2011-03-23-63673a533f-2adf58cfcf
     languages:
     - c
     name: manybugs:php:2011-03-23-63673a533f-2adf58cfcf
@@ -1733,7 +1733,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-11-02-c1d520d19d-9b86852d6e
+    image: semu/manybugs:php-2011-11-02-c1d520d19d-9b86852d6e
     languages:
     - c
     name: manybugs:php:2011-11-02-c1d520d19d-9b86852d6e
@@ -1748,7 +1748,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-02-18-0a91432828-032bbc3164
+    image: semu/manybugs:php-2012-02-18-0a91432828-032bbc3164
     languages:
     - c
     name: manybugs:php:2012-02-18-0a91432828-032bbc3164
@@ -1763,7 +1763,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-05-24-b60f6774dc-1056c57fa9
+    image: semu/manybugs:php-2011-05-24-b60f6774dc-1056c57fa9
     languages:
     - c
     name: manybugs:php:2011-05-24-b60f6774dc-1056c57fa9
@@ -1778,7 +1778,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-01-29-d8b312845c-dc27324dd9
+    image: semu/manybugs:php-2012-01-29-d8b312845c-dc27324dd9
     languages:
     - c
     name: manybugs:php:2012-01-29-d8b312845c-dc27324dd9
@@ -1793,7 +1793,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-03-25-8138f7de40-3acdca4703
+    image: semu/manybugs:php-2011-03-25-8138f7de40-3acdca4703
     languages:
     - c
     name: manybugs:php:2011-03-25-8138f7de40-3acdca4703
@@ -1808,7 +1808,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-01-13-583292ab22-d74a258f24
+    image: semu/manybugs:php-2012-01-13-583292ab22-d74a258f24
     languages:
     - c
     name: manybugs:php:2012-01-13-583292ab22-d74a258f24
@@ -1823,7 +1823,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-03-22-3efc9f2f78-2e19cccad7
+    image: semu/manybugs:php-2012-03-22-3efc9f2f78-2e19cccad7
     languages:
     - c
     name: manybugs:php:2012-03-22-3efc9f2f78-2e19cccad7
@@ -1838,7 +1838,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-11-22-ecc6c335c5-b548293b99
+    image: semu/manybugs:php-2011-11-22-ecc6c335c5-b548293b99
     languages:
     - c
     name: manybugs:php:2011-11-22-ecc6c335c5-b548293b99
@@ -1853,7 +1853,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-01-16-36df53421e-f32760bd40
+    image: semu/manybugs:php-2012-01-16-36df53421e-f32760bd40
     languages:
     - c
     name: manybugs:php:2012-01-16-36df53421e-f32760bd40
@@ -1868,7 +1868,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-03-02-730b54a374-1953161b8c
+    image: semu/manybugs:php-2012-03-02-730b54a374-1953161b8c
     languages:
     - c
     name: manybugs:php:2012-03-02-730b54a374-1953161b8c
@@ -1883,7 +1883,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-11-08-c3e56a152c-3598185a74
+    image: semu/manybugs:php-2011-11-08-c3e56a152c-3598185a74
     languages:
     - c
     name: manybugs:php:2011-11-08-c3e56a152c-3598185a74
@@ -1898,7 +1898,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-02-25-c1322d2505-cfa9c90b20
+    image: semu/manybugs:php-2012-02-25-c1322d2505-cfa9c90b20
     languages:
     - c
     name: manybugs:php:2012-02-25-c1322d2505-cfa9c90b20
@@ -1913,7 +1913,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-01-16-f32760bd40-032d140fd6
+    image: semu/manybugs:php-2012-01-16-f32760bd40-032d140fd6
     languages:
     - c
     name: manybugs:php:2012-01-16-f32760bd40-032d140fd6
@@ -1928,7 +1928,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-11-23-eca88d3064-db0888dfc1
+    image: semu/manybugs:php-2011-11-23-eca88d3064-db0888dfc1
     languages:
     - c
     name: manybugs:php:2011-11-23-eca88d3064-db0888dfc1
@@ -1943,7 +1943,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-11-05-7888715e73-ff48763f4b
+    image: semu/manybugs:php-2011-11-05-7888715e73-ff48763f4b
     languages:
     - c
     name: manybugs:php:2011-11-05-7888715e73-ff48763f4b
@@ -1958,7 +1958,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-01-17-e76c1cc03c-ebddf8a975
+    image: semu/manybugs:php-2012-01-17-e76c1cc03c-ebddf8a975
     languages:
     - c
     name: manybugs:php:2012-01-17-e76c1cc03c-ebddf8a975
@@ -1973,7 +1973,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-01-01-80dd931d40-7c3177e5ab
+    image: semu/manybugs:php-2012-01-01-80dd931d40-7c3177e5ab
     languages:
     - c
     name: manybugs:php:2012-01-01-80dd931d40-7c3177e5ab
@@ -1988,7 +1988,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-01-27-544e36dfff-acaf9c5227
+    image: semu/manybugs:php-2012-01-27-544e36dfff-acaf9c5227
     languages:
     - c
     name: manybugs:php:2012-01-27-544e36dfff-acaf9c5227
@@ -2003,7 +2003,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-11-08-6a42b41c3d-5063a77128
+    image: semu/manybugs:php-2011-11-08-6a42b41c3d-5063a77128
     languages:
     - c
     name: manybugs:php:2011-11-08-6a42b41c3d-5063a77128
@@ -2018,7 +2018,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-02-12-3d898cfa3f-af92365239
+    image: semu/manybugs:php-2012-02-12-3d898cfa3f-af92365239
     languages:
     - c
     name: manybugs:php:2012-02-12-3d898cfa3f-af92365239
@@ -2033,7 +2033,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-01-01-7c3177e5ab-e2a2ed348f
+    image: semu/manybugs:php-2012-01-01-7c3177e5ab-e2a2ed348f
     languages:
     - c
     name: manybugs:php:2012-01-01-7c3177e5ab-e2a2ed348f
@@ -2048,7 +2048,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-04-02-70075bc84c-5a8c917c37
+    image: semu/manybugs:php-2011-04-02-70075bc84c-5a8c917c37
     languages:
     - c
     name: manybugs:php:2011-04-02-70075bc84c-5a8c917c37
@@ -2063,7 +2063,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-11-08-0ac9b9b0ae-cacf363957
+    image: semu/manybugs:php-2011-11-08-0ac9b9b0ae-cacf363957
     languages:
     - c
     name: manybugs:php:2011-11-08-0ac9b9b0ae-cacf363957
@@ -2078,7 +2078,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-11-02-de50e98a07-8d520d6296
+    image: semu/manybugs:php-2011-11-02-de50e98a07-8d520d6296
     languages:
     - c
     name: manybugs:php:2011-11-02-de50e98a07-8d520d6296
@@ -2093,7 +2093,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-02-01-1f49902999-f2329f1f4b
+    image: semu/manybugs:php-2011-02-01-1f49902999-f2329f1f4b
     languages:
     - c
     name: manybugs:php:2011-02-01-1f49902999-f2329f1f4b
@@ -2108,7 +2108,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-03-12-438a30f1e7-7337a901b7
+    image: semu/manybugs:php-2012-03-12-438a30f1e7-7337a901b7
     languages:
     - c
     name: manybugs:php:2012-03-12-438a30f1e7-7337a901b7
@@ -2123,7 +2123,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-03-20-2034e14341-7f2937223d
+    image: semu/manybugs:php-2011-03-20-2034e14341-7f2937223d
     languages:
     - c
     name: manybugs:php:2011-03-20-2034e14341-7f2937223d
@@ -2138,7 +2138,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-04-08-efcb9a71cd-6f3148db81
+    image: semu/manybugs:php-2011-04-08-efcb9a71cd-6f3148db81
     languages:
     - c
     name: manybugs:php:2011-04-08-efcb9a71cd-6f3148db81
@@ -2153,7 +2153,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-03-22-0de2e61cab-991ba13174
+    image: semu/manybugs:php-2011-03-22-0de2e61cab-991ba13174
     languages:
     - c
     name: manybugs:php:2011-03-22-0de2e61cab-991ba13174
@@ -2168,7 +2168,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-11-04-9da01ac6b6-7334dfd7eb
+    image: semu/manybugs:php-2011-11-04-9da01ac6b6-7334dfd7eb
     languages:
     - c
     name: manybugs:php:2011-11-04-9da01ac6b6-7334dfd7eb
@@ -2183,7 +2183,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-10-15-0a1cc5f01c-05c5c8958e
+    image: semu/manybugs:php-2011-10-15-0a1cc5f01c-05c5c8958e
     languages:
     - c
     name: manybugs:php:2011-10-15-0a1cc5f01c-05c5c8958e
@@ -2198,7 +2198,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-11-19-eeba0b5681-d3b20b4058
+    image: semu/manybugs:php-2011-11-19-eeba0b5681-d3b20b4058
     languages:
     - c
     name: manybugs:php:2011-11-19-eeba0b5681-d3b20b4058
@@ -2213,7 +2213,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-12-04-b3ad0b7af7-1d6c98a136
+    image: semu/manybugs:php-2011-12-04-b3ad0b7af7-1d6c98a136
     languages:
     - c
     name: manybugs:php:2011-12-04-b3ad0b7af7-1d6c98a136
@@ -2228,7 +2228,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-02-21-b21f62eb2d-2a6968e43a
+    image: semu/manybugs:php-2011-02-21-b21f62eb2d-2a6968e43a
     languages:
     - c
     name: manybugs:php:2011-02-21-b21f62eb2d-2a6968e43a
@@ -2243,7 +2243,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-11-01-ceac9dc490-9b0d73af1d
+    image: semu/manybugs:php-2011-11-01-ceac9dc490-9b0d73af1d
     languages:
     - c
     name: manybugs:php:2011-11-01-ceac9dc490-9b0d73af1d
@@ -2258,7 +2258,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-11-15-236120d80e-fb37f3b20d
+    image: semu/manybugs:php-2011-11-15-236120d80e-fb37f3b20d
     languages:
     - c
     name: manybugs:php:2011-11-15-236120d80e-fb37f3b20d
@@ -2273,7 +2273,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-01-17-032d140fd6-877f97cde1
+    image: semu/manybugs:php-2012-01-17-032d140fd6-877f97cde1
     languages:
     - c
     name: manybugs:php:2012-01-17-032d140fd6-877f97cde1
@@ -2288,7 +2288,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-12-17-db63456a8d-3dc9f0abe6
+    image: semu/manybugs:php-2011-12-17-db63456a8d-3dc9f0abe6
     languages:
     - c
     name: manybugs:php:2011-12-17-db63456a8d-3dc9f0abe6
@@ -2303,7 +2303,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-12-18-beda5efd41-622412d8e6
+    image: semu/manybugs:php-2011-12-18-beda5efd41-622412d8e6
     languages:
     - c
     name: manybugs:php:2011-12-18-beda5efd41-622412d8e6
@@ -2318,7 +2318,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-02-04-793cfe1376-109b8e99e0
+    image: semu/manybugs:php-2011-02-04-793cfe1376-109b8e99e0
     languages:
     - c
     name: manybugs:php:2011-02-04-793cfe1376-109b8e99e0
@@ -2333,7 +2333,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-02-14-86efc8e55e-d1d61ce612
+    image: semu/manybugs:php-2011-02-14-86efc8e55e-d1d61ce612
     languages:
     - c
     name: manybugs:php:2011-02-14-86efc8e55e-d1d61ce612
@@ -2348,7 +2348,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-01-18-95388b7cda-b9b1fb1827
+    image: semu/manybugs:php-2011-01-18-95388b7cda-b9b1fb1827
     languages:
     - c
     name: manybugs:php:2011-01-18-95388b7cda-b9b1fb1827
@@ -2363,7 +2363,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-10-31-2e5d5e5ac6-b5f15ef561
+    image: semu/manybugs:php-2011-10-31-2e5d5e5ac6-b5f15ef561
     languages:
     - c
     name: manybugs:php:2011-10-31-2e5d5e5ac6-b5f15ef561
@@ -2378,7 +2378,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-03-08-0169020e49-cdc512afb3
+    image: semu/manybugs:php-2012-03-08-0169020e49-cdc512afb3
     languages:
     - c
     name: manybugs:php:2012-03-08-0169020e49-cdc512afb3
@@ -2393,7 +2393,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-04-06-187eb235fe-2e25ec9eb7
+    image: semu/manybugs:php-2011-04-06-187eb235fe-2e25ec9eb7
     languages:
     - c
     name: manybugs:php:2011-04-06-187eb235fe-2e25ec9eb7
@@ -2408,7 +2408,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-11-25-3b1ce022f1-c2ede9a00a
+    image: semu/manybugs:php-2011-11-25-3b1ce022f1-c2ede9a00a
     languages:
     - c
     name: manybugs:php:2011-11-25-3b1ce022f1-c2ede9a00a
@@ -2423,7 +2423,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-12-04-1e6a82a1cf-dfa08dc325
+    image: semu/manybugs:php-2011-12-04-1e6a82a1cf-dfa08dc325
     languages:
     - c
     name: manybugs:php:2011-12-04-1e6a82a1cf-dfa08dc325
@@ -2438,7 +2438,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-02-19-356b619487-a3a5157286
+    image: semu/manybugs:php-2011-02-19-356b619487-a3a5157286
     languages:
     - c
     name: manybugs:php:2011-02-19-356b619487-a3a5157286
@@ -2453,7 +2453,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-12-10-74343ca506-52c36e60c4
+    image: semu/manybugs:php-2011-12-10-74343ca506-52c36e60c4
     languages:
     - c
     name: manybugs:php:2011-12-10-74343ca506-52c36e60c4
@@ -2468,7 +2468,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-04-30-9c285fddbb-93f65cdeac
+    image: semu/manybugs:php-2011-04-30-9c285fddbb-93f65cdeac
     languages:
     - c
     name: manybugs:php:2011-04-30-9c285fddbb-93f65cdeac
@@ -2483,7 +2483,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-03-27-11efb7295e-f7b7b6aa9e
+    image: semu/manybugs:php-2011-03-27-11efb7295e-f7b7b6aa9e
     languages:
     - c
     name: manybugs:php:2011-03-27-11efb7295e-f7b7b6aa9e
@@ -2498,7 +2498,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-11-11-fcbfbea8d2-c1e510aea8
+    image: semu/manybugs:php-2011-11-11-fcbfbea8d2-c1e510aea8
     languages:
     - c
     name: manybugs:php:2011-11-11-fcbfbea8d2-c1e510aea8
@@ -2513,7 +2513,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-04-07-d3274b7f20-77ed819430
+    image: semu/manybugs:php-2011-04-07-d3274b7f20-77ed819430
     languages:
     - c
     name: manybugs:php:2011-04-07-d3274b7f20-77ed819430
@@ -2528,7 +2528,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-03-04-60dfd64bf2-34fe62619d
+    image: semu/manybugs:php-2012-03-04-60dfd64bf2-34fe62619d
     languages:
     - c
     name: manybugs:php:2012-03-04-60dfd64bf2-34fe62619d
@@ -2543,7 +2543,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-03-27-2191af9546-b83e243c23
+    image: semu/manybugs:php-2011-03-27-2191af9546-b83e243c23
     languages:
     - c
     name: manybugs:php:2011-03-27-2191af9546-b83e243c23
@@ -2558,7 +2558,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2011-11-19-eeba0b5681-f330c8ab4e
+    image: semu/manybugs:php-2011-11-19-eeba0b5681-f330c8ab4e
     languages:
     - c
     name: manybugs:php:2011-11-19-eeba0b5681-f330c8ab4e
@@ -2573,7 +2573,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:php-2012-03-19-53e3467ff2-9a460497da
+    image: semu/manybugs:php-2012-03-19-53e3467ff2-9a460497da
     languages:
     - c
     name: manybugs:php:2012-03-19-53e3467ff2-9a460497da

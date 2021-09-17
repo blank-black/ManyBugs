@@ -1,9 +1,9 @@
-FROM squareslab/manybugs:base
+FROM semu/manybugs:base
 MAINTAINER Chris Timperley "christimperley@gmail.com"
 
 #RUN sudo dpkg --add-architecture i386
 RUN sudo apt-get update && \
-    sudo apt-get install -y libncurses-dev \
+    sudo DEBIAN_FRONTEND=noninteractive apt-get install -y libncurses-dev \
                             libsqlite-dev \
                             libgdbm-dev \
                             libssl-dev \

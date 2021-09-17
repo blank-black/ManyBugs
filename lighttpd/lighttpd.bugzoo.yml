@@ -2,72 +2,72 @@ version: "1.0"
 
 blueprints:
   - type: docker
-    tag: squareslab/manybugs:lighttpd
+    tag: semu/manybugs:lighttpd
     file: Dockerfile
     context: .
-    depends-on: squareslab/manybugs:base
+    depends-on: semu/manybugs:base
   - arguments:
       bug_commit: 1806
       fix_commit: 1807
-    depends-on: squareslab/manybugs:lighttpd
+    depends-on: semu/manybugs:lighttpd
     file: Dockerfile.bug
-    tag: squareslab/manybugs:lighttpd-1806-1807
+    tag: semu/manybugs:lighttpd-1806-1807
     type: docker
   - arguments:
       bug_commit: 2785
       fix_commit: 2786
-    depends-on: squareslab/manybugs:lighttpd
+    depends-on: semu/manybugs:lighttpd
     file: Dockerfile.bug
-    tag: squareslab/manybugs:lighttpd-2785-2786
+    tag: semu/manybugs:lighttpd-2785-2786
     type: docker
   - arguments:
       bug_commit: 2330
       fix_commit: 2331
-    depends-on: squareslab/manybugs:lighttpd
+    depends-on: semu/manybugs:lighttpd
     file: Dockerfile.bug
-    tag: squareslab/manybugs:lighttpd-2330-2331
+    tag: semu/manybugs:lighttpd-2330-2331
     type: docker
   - arguments:
       bug_commit: 1948
       fix_commit: 1949
-    depends-on: squareslab/manybugs:lighttpd
+    depends-on: semu/manybugs:lighttpd
     file: Dockerfile.bug
-    tag: squareslab/manybugs:lighttpd-1948-1949
+    tag: semu/manybugs:lighttpd-1948-1949
     type: docker
   - arguments:
       bug_commit: 2254
       fix_commit: 2259
-    depends-on: squareslab/manybugs:lighttpd
+    depends-on: semu/manybugs:lighttpd
     file: Dockerfile.bug
-    tag: squareslab/manybugs:lighttpd-2254-2259
+    tag: semu/manybugs:lighttpd-2254-2259
     type: docker
   - arguments:
       bug_commit: 1794
       fix_commit: 1795
-    depends-on: squareslab/manybugs:lighttpd
+    depends-on: semu/manybugs:lighttpd
     file: Dockerfile.bug
-    tag: squareslab/manybugs:lighttpd-1794-1795
+    tag: semu/manybugs:lighttpd-1794-1795
     type: docker
   - arguments:
       bug_commit: 2661
       fix_commit: 2662
-    depends-on: squareslab/manybugs:lighttpd
+    depends-on: semu/manybugs:lighttpd
     file: Dockerfile.bug
-    tag: squareslab/manybugs:lighttpd-2661-2662
+    tag: semu/manybugs:lighttpd-2661-2662
     type: docker
   - arguments:
       bug_commit: 2225
       fix_commit: 2226
-    depends-on: squareslab/manybugs:lighttpd
+    depends-on: semu/manybugs:lighttpd
     file: Dockerfile.bug
-    tag: squareslab/manybugs:lighttpd-2225-2226
+    tag: semu/manybugs:lighttpd-2225-2226
     type: docker
   - arguments:
       bug_commit: 1913
       fix_commit: 1914
-    depends-on: squareslab/manybugs:lighttpd
+    depends-on: semu/manybugs:lighttpd
     file: Dockerfile.bug
-    tag: squareslab/manybugs:lighttpd-1913-1914
+    tag: semu/manybugs:lighttpd-1913-1914
     type: docker
 
 bugs:
@@ -75,7 +75,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:lighttpd-1806-1807
+    image: semu/manybugs:lighttpd-1806-1807
     languages:
     - c
     name: manybugs:lighttpd:1806-1807
@@ -90,7 +90,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:lighttpd-2785-2786
+    image: semu/manybugs:lighttpd-2785-2786
     languages:
     - c
     name: manybugs:lighttpd:2785-2786
@@ -105,7 +105,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:lighttpd-2330-2331
+    image: semu/manybugs:lighttpd-2330-2331
     languages:
     - c
     name: manybugs:lighttpd:2330-2331
@@ -120,7 +120,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:lighttpd-1948-1949
+    image: semu/manybugs:lighttpd-1948-1949
     languages:
     - c
     name: manybugs:lighttpd:1948-1949
@@ -135,7 +135,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:lighttpd-2254-2259
+    image: semu/manybugs:lighttpd-2254-2259
     languages:
     - c
     name: manybugs:lighttpd:2254-2259
@@ -150,7 +150,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:lighttpd-1794-1795
+    image: semu/manybugs:lighttpd-1794-1795
     languages:
     - c
     name: manybugs:lighttpd:1794-1795
@@ -165,7 +165,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:lighttpd-2661-2662
+    image: semu/manybugs:lighttpd-2661-2662
     languages:
     - c
     name: manybugs:lighttpd:2661-2662
@@ -180,7 +180,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:lighttpd-2225-2226
+    image: semu/manybugs:lighttpd-2225-2226
     languages:
     - c
     name: manybugs:lighttpd:2225-2226
@@ -195,7 +195,7 @@ bugs:
       time-limit: 300
       type: configure-and-make
     dataset: manybugs
-    image: squareslab/manybugs:lighttpd-1913-1914
+    image: semu/manybugs:lighttpd-1913-1914
     languages:
     - c
     name: manybugs:lighttpd:1913-1914

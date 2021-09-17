@@ -1,4 +1,4 @@
-FROM squareslab/manybugs:gmp
+FROM semu/manybugs:gmp
 
 ARG bug_commit
 ARG fix_commit

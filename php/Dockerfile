@@ -1,4 +1,4 @@
-FROM squareslab/manybugs:base
+FROM semu/manybugs:base
 
 RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends \
       autoconf \

@@ -2,23 +2,23 @@ version: "1.0"
 
 blueprints:
   - type: docker
-    tag: squareslab/manybugs:gmp
+    tag: semu/manybugs:gmp
     file: Dockerfile
     context: .
-    depends-on: squareslab/manybugs:base
+    depends-on: semu/manybugs:base
 
   - type: docker
-    tag: squareslab/manybugs:gmp-13420-13421
+    tag: semu/manybugs:gmp-13420-13421
     file: Dockerfile.bug
-    depends-on: squareslab/manybugs:gmp
+    depends-on: semu/manybugs:gmp
     arguments:
       bug_commit: 13420
       fix_commit: 13421
 
   - type: docker
-    tag: squareslab/manybugs:gmp-14166-14167
+    tag: semu/manybugs:gmp-14166-14167
     file: Dockerfile.bug
-    depends-on: squareslab/manybugs:gmp
+    depends-on: semu/manybugs:gmp
     arguments:
       bug_commit: 14166
       fix_commit: 14167
@@ -27,7 +27,7 @@ bugs:
   - name: manybugs:gmp:13420-13421
     program: gmp
     dataset: manybugs
-    image: squareslab/manybugs:gmp-13420-13421
+    image: semu/manybugs:gmp-13420-13421
     source-location: /experiment/src
     languages:
       - c
@@ -43,7 +43,7 @@ bugs:
   - name: manybugs:gmp:14166-14167
     program: gmp
     dataset: manybugs
-    image: squareslab/manybugs:gmp-14166-14167
+    image: semu/manybugs:gmp-14166-14167
     source-location: /experiment/src
     languages:
       - c
@@ -55,3 +55,9 @@ bugs:
       passing: 144
       time-limit: 25
       type: genprog
+
+plugins:
+  - name: genprog
+    image: semu/genprog
+    environment:
+      PATH: "/opt/genprog/bin:${PATH}"
