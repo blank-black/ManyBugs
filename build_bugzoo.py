@@ -144,7 +144,9 @@ def run_container(name):
                 break
         if not built_flag:
             os.chdir(os.path.join(WORK_PATH, 'BugZoo'))
-            os.system('pipenv run bugzoo bug build ' + name)
+            if not os.path.isdir(os.path.join(WORK_PATH, 'build_log')):
+                os.system('mkdir ' + os.path.join(WORK_PATH, 'build_log'))
+            os.system('pipenv run bugzoo bug build ' + name + ' > ' + os.path.join(WORK_PATH, 'build_log', name + '.log 2>&1'))
             os.chdir(WORK_PATH)
             client = docker.from_env()
             for n in [i.tags[0] for i in client.images.list()]:

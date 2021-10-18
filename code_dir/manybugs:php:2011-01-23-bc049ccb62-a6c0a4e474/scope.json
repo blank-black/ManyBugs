@@ -1,0 +1,4 @@
+{
+    "Source-Files": ["php_date.c"],
+    "Functions": ["update_errors_warnings"]
+}
