@@ -1,0 +1,16 @@
+741,743c741,743
+<        if (srv_sock->is_ssl) {
+<                cgi_env_add(&env, CONST_STR_LEN("HTTPS"), CONST_STR_LEN("on"));
+<        }
+---
+> 		if (srv_sock->is_ssl) {
+> 			cgi_env_add(&env, CONST_STR_LEN("HTTPS"), CONST_STR_LEN("on"));
+> 		}
+747,748c747,750
+< 		ltostr(buf, con->request.content_length);
+< 		cgi_env_add(&env, CONST_STR_LEN("CONTENT_LENGTH"), buf, strlen(buf));
+---
+> 		if (con->request.content_length > 0) {
+> 			ltostr(buf, con->request.content_length);
+> 			cgi_env_add(&env, CONST_STR_LEN("CONTENT_LENGTH"), buf, strlen(buf));
+> 		}

@@ -1,0 +1,476 @@
+34d33
+< #include <errno.h>
+52d50
+< #include "tiffiop.h"
+59,65d56
+< #ifndef EXIT_SUCCESS
+< # define EXIT_SUCCESS	0
+< #endif
+< #ifndef EXIT_FAILURE
+< # define EXIT_FAILURE	1
+< #endif
+< 
+201,212c192,197
+< #define TIFF2PDF_DATETIME_SIZE 17
+< 	char pdf_datetime[TIFF2PDF_DATETIME_SIZE];
+< #define TIFF2PDF_CREATOR_SIZE 512
+< 	char pdf_creator[TIFF2PDF_CREATOR_SIZE];
+< #define TIFF2PDF_AUTHOR_SIZE 512
+< 	char pdf_author[TIFF2PDF_AUTHOR_SIZE];
+< #define TIFF2PDF_TITLE_SIZE 512
+< 	char pdf_title[TIFF2PDF_TITLE_SIZE];
+< #define TIFF2PDF_SUBJECT_SIZE 512
+< 	char pdf_subject[TIFF2PDF_SUBJECT_SIZE];
+< #define TIFF2PDF_KEYWORDS_SIZE 512
+< 	char pdf_keywords[TIFF2PDF_KEYWORDS_SIZE];
+---
+> 	unsigned char* pdf_datetime;
+> 	unsigned char* pdf_creator;
+> 	unsigned char* pdf_author;
+> 	unsigned char* pdf_title;
+> 	unsigned char* pdf_subject;
+> 	unsigned char* pdf_keywords;
+300c285
+< tsize_t t2p_write_pdf_string(char*, TIFF*);
+---
+> tsize_t t2p_write_pdf_string(unsigned char*, TIFF*);
+540c525
+<     The above example would generate PDF output from input.tiff and write it
+---
+>     The above example would generate PDF output from input.tiff and write it 
+545,546c530,531
+<     The above example would generate the file output.pdf from input.tiff,
+<     putting the image pages on a letter sized page, compressing the output
+---
+>     The above example would generate the file output.pdf from input.tiff, 
+>     putting the image pages on a letter sized page, compressing the output 
+550c535
+< 
+---
+> 	 
+564,565c549,550
+< 	int c, ret = EXIT_SUCCESS;
+< 
+---
+> 	int c;
+> 	
+660,661c645,654
+< 				if (strlen(optarg) == 0) {
+< 					t2p->pdf_datetime[0] = '\0';
+---
+> 				t2p->pdf_datetime =
+> 					(unsigned char*)_TIFFmalloc(17);
+> 				if(t2p->pdf_datetime==NULL){
+> 					TIFFError(TIFF2PDF_MODULE, 
+> 				"Can't allocate %u bytes of memory for main", 
+> 						17); 
+> 					goto fail;
+> 				}
+> 				if(strlen(optarg)==0){
+> 					t2p->pdf_datetime[0] = 0;
+662a656
+> 					if(strlen(optarg)>14){optarg[14]=0;}
+665,667c659,660
+< 					strncpy(t2p->pdf_datetime + 2, optarg,
+< 						sizeof(t2p->pdf_datetime) - 3);
+< 					t2p->pdf_datetime[sizeof(t2p->pdf_datetime) - 1] = '\0';
+---
+> 					strcpy((char *)t2p->pdf_datetime + 2,
+> 					       optarg);
+671,672c664,673
+< 				strncpy(t2p->pdf_creator, optarg, sizeof(t2p->pdf_creator) - 1);
+< 				t2p->pdf_creator[sizeof(t2p->pdf_creator) - 1] = '\0';
+---
+> 				t2p->pdf_creator = (unsigned char *)
+> 					_TIFFmalloc(strlen(optarg) + 1);
+> 				if(t2p->pdf_creator==NULL){
+> 					TIFFError(TIFF2PDF_MODULE, 
+> 				"Can't allocate %lu bytes of memory for main", 
+> 						  (unsigned long) strlen(optarg) + 1); 
+> 					goto fail;
+> 				}
+> 				strcpy((char *)t2p->pdf_creator, optarg);
+> 				t2p->pdf_creator[strlen(optarg)] = 0;
+675,676c676,686
+< 				strncpy(t2p->pdf_author, optarg, sizeof(t2p->pdf_author) - 1);
+< 				t2p->pdf_author[sizeof(t2p->pdf_author) - 1] = '\0';
+---
+> 				t2p->pdf_author = (unsigned char *)
+> 					_TIFFmalloc(strlen(optarg) + 1);
+> 				if(t2p->pdf_author==NULL){
+> 					TIFFError(
+> 						TIFF2PDF_MODULE, 
+> 				"Can't allocate %lu bytes of memory for main", 
+> 						(unsigned long) strlen(optarg) + 1); 
+> 					goto fail;
+> 				}
+> 				strcpy((char *)t2p->pdf_author, optarg);
+> 				t2p->pdf_author[strlen(optarg)]=0;
+679,680c689,699
+< 				strncpy(t2p->pdf_title, optarg, sizeof(t2p->pdf_title) - 1);
+< 				t2p->pdf_title[sizeof(t2p->pdf_title) - 1] = '\0';
+---
+> 				t2p->pdf_title = (unsigned char*)
+> 					_TIFFmalloc(strlen(optarg)+1);
+> 				if(t2p->pdf_title==NULL){
+> 					TIFFError(
+> 						TIFF2PDF_MODULE, 
+> 				"Can't allocate %lu bytes of memory for main", 
+> 						(unsigned long) strlen(optarg) + 1); 
+> 					goto fail;
+> 				}
+> 				strcpy((char *)t2p->pdf_title, optarg);
+> 				t2p->pdf_title[strlen(optarg)] = 0;
+683,684c702,712
+< 				strncpy(t2p->pdf_subject, optarg, sizeof(t2p->pdf_subject) - 1);
+< 				t2p->pdf_subject[sizeof(t2p->pdf_subject) - 1] = '\0';
+---
+> 				t2p->pdf_subject = (unsigned char*)
+> 					_TIFFmalloc(strlen(optarg) + 1);
+> 				if(t2p->pdf_subject==NULL){
+> 					TIFFError(
+> 						TIFF2PDF_MODULE, 
+> 				"Can't allocate %lu bytes of memory for main", 
+> 						(unsigned long) strlen(optarg)+1); 
+> 					goto fail;
+> 				}
+> 				strcpy((char *)t2p->pdf_subject, optarg);
+> 				t2p->pdf_subject[strlen(optarg)]=0;
+687,689c715,726
+< 				strncpy(t2p->pdf_keywords, optarg, sizeof(t2p->pdf_keywords) - 1);
+< 				t2p->pdf_keywords[sizeof(t2p->pdf_keywords) - 1] = '\0';
+< 				break;
+---
+> 				t2p->pdf_keywords = (unsigned char*)
+> 					_TIFFmalloc(strlen(optarg) + 1);
+> 				if(t2p->pdf_keywords==NULL){
+> 					TIFFError(
+> 						TIFF2PDF_MODULE, 
+> 				"Can't allocate %lu bytes of memory for main", 
+> 						(unsigned long) strlen(optarg) + 1); 
+> 					goto fail;
+> 				}
+> 				strcpy((char *)t2p->pdf_keywords, optarg);
+> 				t2p->pdf_keywords[strlen(optarg)] = 0;
+> 				break;		
+768,769d804
+< fail:
+< 	ret = EXIT_FAILURE;
+770a806,812
+> 	if (output != NULL)
+> 		TIFFClose(output);
+> 	if (t2p != NULL)
+> 		t2p_free(t2p);
+> 	return(EXIT_SUCCESS);
+> 
+> fail:
+777c819
+< 	return ret;
+---
+> 	return(EXIT_FAILURE);
+885,886c927,930
+<  * This function allocates and initializes a T2P context struct pointer.
+<  */
+---
+> 	This function allocates and initializes a T2P context struct pointer.
+> */
+> 
+> T2P* t2p_init(){
+888,889d931
+< T2P* t2p_init()
+< {
+911,912c953,954
+<  * This function frees a T2P context struct pointer and any allocated data fields of it.
+<  */
+---
+> 	This function frees a T2P context struct pointer and any allocated data fields of it.
+> */
+914,916c956,958
+< void t2p_free(T2P* t2p)
+< {
+< 	int i = 0;
+---
+> void t2p_free(T2P* t2p){
+> 
+> 	int i=0;
+918c960
+< 	if (t2p != NULL) {
+---
+> 	if(t2p != NULL){
+938a981,998
+> 		if(t2p->pdf_datetime != NULL){
+> 			_TIFFfree( (tdata_t) t2p->pdf_datetime);
+> 		}
+> 		if(t2p->pdf_creator != NULL){
+> 			_TIFFfree( (tdata_t) t2p->pdf_creator);
+> 		}
+> 		if(t2p->pdf_author != NULL){
+> 			_TIFFfree( (tdata_t) t2p->pdf_author);
+> 		}
+> 		if(t2p->pdf_title != NULL){
+> 			_TIFFfree( (tdata_t) t2p->pdf_title);
+> 		}
+> 		if(t2p->pdf_subject != NULL){
+> 			_TIFFfree( (tdata_t) t2p->pdf_subject);
+> 		}
+> 		if(t2p->pdf_keywords != NULL){
+> 			_TIFFfree( (tdata_t) t2p->pdf_keywords);
+> 		}
+3663,3664c3723,3724
+<  * This function writes a PDF string object to output.
+<  */
+---
+> 	This function writes a PDF string object to output.
+> */
+3666,3667c3726,3727
+< tsize_t t2p_write_pdf_string(char* pdfstr, TIFF* output)
+< {
+---
+> tsize_t t2p_write_pdf_string(unsigned char* pdfstr, TIFF* output){
+> 
+3673c3733
+< 	len = strlen(pdfstr);
+---
+> 	len = strlen((char *)pdfstr);
+3677,3678c3737,3739
+< 			snprintf(buffer, sizeof(buffer), "\\%.3hho", pdfstr[i]);
+< 			written += t2pWriteFile(output, (tdata_t)buffer, 4);
+---
+> 			sprintf(buffer, "\\%.3hho", pdfstr[i]);
+> 			buffer[sizeof(buffer) - 1] = '\0';
+> 			written += t2pWriteFile(output, (tdata_t) buffer, 4);
+3821,3822c3882,3883
+<  * This function writes the PDF Catalog structure to output.
+<  */
+---
+> 	This function writes the PDF Catalog structure to output.
+> */
+3824,3826c3885,3887
+< tsize_t t2p_write_pdf_catalog(T2P* t2p, TIFF* output)
+< {
+< 	tsize_t written = 0;
+---
+> tsize_t t2p_write_pdf_catalog(T2P* t2p, TIFF* output){
+> 
+> 	tsize_t written=0;
+3828c3889
+< 	int buflen = 0;
+---
+> 	int buflen=0;
+3833,3835c3894,3895
+< 	buflen = snprintf(buffer, sizeof(buffer), "%lu", (unsigned long)t2p->pdf_pages);
+< 	written += t2pWriteFile(output, (tdata_t) buffer,
+< 				TIFFmin((size_t)buflen, sizeof(buffer) - 1));
+---
+> 	buflen=sprintf(buffer, "%lu", (unsigned long)t2p->pdf_pages);
+> 	written += t2pWriteFile(output, (tdata_t) buffer, buflen );
+3851,3852c3911,3912
+< tsize_t t2p_write_pdf_info(T2P* t2p, TIFF* input, TIFF* output)
+< {
+---
+> tsize_t t2p_write_pdf_info(T2P* t2p, TIFF* input, TIFF* output){
+> 
+3854c3914
+< 	char* info;
+---
+> 	unsigned char* info;
+3856,3857c3916,3918
+< 
+< 	if(t2p->pdf_datetime[0] == '\0')
+---
+> 	int buflen = 0;
+> 	
+> 	if(t2p->pdf_datetime==NULL){
+3859c3920,3921
+< 	if (strlen(t2p->pdf_datetime) > 0) {
+---
+> 	}
+> 	if(strlen((char *)t2p->pdf_datetime) > 0){
+3867,3868c3929,3930
+< 	snprintf(buffer, sizeof(buffer), "libtiff / tiff2pdf - %d", TIFFLIB_VERSION);
+< 	written += t2p_write_pdf_string(buffer, output);
+---
+> 	buflen = sprintf(buffer, "libtiff / tiff2pdf - %d", TIFFLIB_VERSION);
+> 	written += t2p_write_pdf_string((unsigned char*)buffer, output);
+3870,3877c3932,3945
+< 	if (t2p->pdf_creator[0] != '\0') {
+< 		written += t2pWriteFile(output, (tdata_t) "/Creator ", 9);
+< 		written += t2p_write_pdf_string(t2p->pdf_creator, output);
+< 		written += t2pWriteFile(output, (tdata_t) "\n", 1);
+< 	} else {
+< 		if (TIFFGetField(input, TIFFTAG_SOFTWARE, &info) != 0 && info) {
+< 			if(strlen(info) >= sizeof(t2p->pdf_creator))
+< 				info[sizeof(t2p->pdf_creator) - 1] = '\0';
+---
+> 	if(t2p->pdf_creator != NULL){ 
+> 		if(strlen((char *)t2p->pdf_creator)>0){
+> 			if(strlen((char *)t2p->pdf_creator) > 511) {
+> 				t2p->pdf_creator[512] = '\0';
+> 			}
+> 			written += t2pWriteFile(output, (tdata_t) "/Creator ", 9);
+> 			written += t2p_write_pdf_string(t2p->pdf_creator, output);
+> 			written += t2pWriteFile(output, (tdata_t) "\n", 1);
+> 		}
+> 	} else{
+> 		if( TIFFGetField(input, TIFFTAG_SOFTWARE, &info) != 0){
+> 			if(strlen((char *)info) > 511) {
+> 				info[512] = '\0';
+> 			}
+3883,3892c3951,3955
+< 	if (t2p->pdf_author[0] != '\0') {
+< 		written += t2pWriteFile(output, (tdata_t) "/Author ", 8);
+< 		written += t2p_write_pdf_string(t2p->pdf_author, output);
+< 		written += t2pWriteFile(output, (tdata_t) "\n", 1);
+< 	} else {
+< 		if ((TIFFGetField(input, TIFFTAG_ARTIST, &info) != 0
+< 		     || TIFFGetField(input, TIFFTAG_COPYRIGHT, &info) != 0)
+< 		    && info) {
+< 			if (strlen(info) >= sizeof(t2p->pdf_author))
+< 				info[sizeof(t2p->pdf_author) - 1] = '\0';
+---
+> 	if(t2p->pdf_author != NULL) { 
+> 		if(strlen((char *)t2p->pdf_author) > 0) {
+> 			if(strlen((char *)t2p->pdf_author) > 511) {
+> 				t2p->pdf_author[512] = '\0';
+> 			}
+3894c3957
+< 			written += t2p_write_pdf_string(info, output);
+---
+> 			written += t2p_write_pdf_string(t2p->pdf_author, output);
+3896a3960,3975
+> 	} else{
+> 		if( TIFFGetField(input, TIFFTAG_ARTIST, &info) != 0){
+> 			if(strlen((char *)info) > 511) {
+> 				info[512] = '\0';
+> 			}
+> 			written += t2pWriteFile(output, (tdata_t) "/Author ", 8);
+> 			written += t2p_write_pdf_string(info, output);
+> 			written += t2pWriteFile(output, (tdata_t) "\n", 1);
+> 		} else if ( TIFFGetField(input, TIFFTAG_COPYRIGHT, &info) != 0){
+> 			if(strlen((char *)info) > 511) {
+> 				info[512] = '\0';
+> 			}
+> 			written += t2pWriteFile(output, (tdata_t) "/Author ", 8);
+> 			written += t2p_write_pdf_string(info, output);
+> 			written += t2pWriteFile(output, (tdata_t) "\n", 1);
+> 		} 
+3898,3904c3977,3988
+< 	if (t2p->pdf_title[0] != '\0') {
+< 		written += t2pWriteFile(output, (tdata_t) "/Title ", 7);
+< 		written += t2p_write_pdf_string(t2p->pdf_title, output);
+< 		written += t2pWriteFile(output, (tdata_t) "\n", 1);
+< 	} else {
+< 		if (TIFFGetField(input, TIFFTAG_DOCUMENTNAME, &info) != 0){
+< 			if(strlen(info) > 511) {
+---
+> 	if(t2p->pdf_title != NULL) {
+> 		if(strlen((char *)t2p->pdf_title) > 0) {
+> 			if(strlen((char *)t2p->pdf_title) > 511) {
+> 				t2p->pdf_title[512] = '\0';
+> 			}
+> 			written += t2pWriteFile(output, (tdata_t) "/Title ", 7);
+> 			written += t2p_write_pdf_string(t2p->pdf_title, output);
+> 			written += t2pWriteFile(output, (tdata_t) "\n", 1);
+> 		}
+> 	} else{
+> 		if( TIFFGetField(input, TIFFTAG_DOCUMENTNAME, &info) != 0){
+> 			if(strlen((char *)info) > 511) {
+3912,3915c3996,4004
+< 	if (t2p->pdf_subject[0] != '\0') {
+< 		written += t2pWriteFile(output, (tdata_t) "/Subject ", 9);
+< 		written += t2p_write_pdf_string(t2p->pdf_subject, output);
+< 		written += t2pWriteFile(output, (tdata_t) "\n", 1);
+---
+> 	if(t2p->pdf_subject != NULL) {
+> 		if(strlen((char *)t2p->pdf_subject) > 0) {
+> 			if(strlen((char *)t2p->pdf_subject) > 511) {
+> 				t2p->pdf_subject[512] = '\0';
+> 			}
+> 			written += t2pWriteFile(output, (tdata_t) "/Subject ", 9);
+> 			written += t2p_write_pdf_string(t2p->pdf_subject, output);
+> 			written += t2pWriteFile(output, (tdata_t) "\n", 1);
+> 		}
+3917,3919c4006,4009
+< 		if (TIFFGetField(input, TIFFTAG_IMAGEDESCRIPTION, &info) != 0 && info) {
+< 			if (strlen(info) >= sizeof(t2p->pdf_subject))
+< 				info[sizeof(t2p->pdf_subject) - 1] = '\0';
+---
+> 		if(TIFFGetField(input, TIFFTAG_IMAGEDESCRIPTION, &info) != 0) {
+> 			if(strlen((char *)info) > 511) {
+> 				info[512] = '\0';
+> 			}
+3925,3928c4015,4023
+< 	if (t2p->pdf_keywords[0] != '\0') {
+< 		written += t2pWriteFile(output, (tdata_t) "/Keywords ", 10);
+< 		written += t2p_write_pdf_string(t2p->pdf_keywords, output);
+< 		written += t2pWriteFile(output, (tdata_t) "\n", 1);
+---
+> 	if(t2p->pdf_keywords != NULL) { 
+> 		if(strlen((char *)t2p->pdf_keywords) > 0) {
+> 			if(strlen((char *)t2p->pdf_keywords) > 511) {
+> 				t2p->pdf_keywords[512] = '\0';
+> 			}
+> 			written += t2pWriteFile(output, (tdata_t) "/Keywords ", 10);
+> 			written += t2p_write_pdf_string(t2p->pdf_keywords, output);
+> 			written += t2pWriteFile(output, (tdata_t) "\n", 1);
+> 		}
+3930c4025
+< 	written += t2pWriteFile(output, (tdata_t) ">> \n", 4);
+---
+> 	written += t2pWriteFile(output, (tdata_t) ">> \n", 4);	
+3941a4037
+> 
+3945,3959c4041,4049
+< 	if (time(&timenow) == (time_t) -1) {
+< 		TIFFError(TIFF2PDF_MODULE,
+< 			  "Can't get the current time: %s", strerror(errno));
+< 		timenow = (time_t) 0;
+< 	}
+< 
+< 	currenttime = localtime(&timenow);
+< 	snprintf(t2p->pdf_datetime, sizeof(t2p->pdf_datetime),
+< 		 "D:%.4d%.2d%.2d%.2d%.2d%.2d",
+< 		 (currenttime->tm_year + 1900) % 65536,
+< 		 (currenttime->tm_mon + 1) % 256,
+< 		 (currenttime->tm_mday) % 256,
+< 		 (currenttime->tm_hour) % 256,
+< 		 (currenttime->tm_min) % 256,
+< 		 (currenttime->tm_sec) % 256);
+---
+> 	timenow=time(0);
+> 	currenttime=localtime(&timenow);
+> 	sprintf((char *)t2p->pdf_datetime, "D:%.4d%.2d%.2d%.2d%.2d%.2d",
+> 		(currenttime->tm_year+1900) % 65536, 
+> 		(currenttime->tm_mon+1) % 256, 
+> 		(currenttime->tm_mday) % 256, 
+> 		(currenttime->tm_hour) % 256, 
+> 		(currenttime->tm_min) % 256, 
+> 		(currenttime->tm_sec) % 256);
+3969,3970c4059,4060
+< void t2p_pdf_tifftime(T2P* t2p, TIFF* input)
+< {
+---
+> void t2p_pdf_tifftime(T2P* t2p, TIFF* input){
+> 
+3973c4063,4071
+< 	if (TIFFGetField(input, TIFFTAG_DATETIME, &datetime) != 0
+---
+> 	t2p->pdf_datetime = (unsigned char*) _TIFFmalloc(19);
+> 	if(t2p->pdf_datetime == NULL){
+> 		TIFFError(TIFF2PDF_MODULE, 
+> 		"Can't allocate %u bytes of memory for t2p_pdf_tiff_time", 17); 
+> 		t2p->t2p_error = T2P_ERR_ERROR;
+> 		return;
+> 	}
+> 	t2p->pdf_datetime[16] = '\0';
+> 	if( TIFFGetField(input, TIFFTAG_DATETIME, &datetime) != 0 
+3991d4088
+< 		t2p->pdf_datetime[16] = '\0';
+4011c4108
+< 	written += t2pWriteFile(output,
+---
+> 	written += t2pWriteFile(output, 
+4048c4145
+< 
+---
+> 	

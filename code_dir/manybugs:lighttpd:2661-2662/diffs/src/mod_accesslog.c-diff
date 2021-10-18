@@ -1,0 +1,2 @@
+168a169
+> 	if (str->used == 0) return;

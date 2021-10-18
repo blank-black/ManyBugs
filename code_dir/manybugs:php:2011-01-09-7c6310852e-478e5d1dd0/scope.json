@@ -1,0 +1,4 @@
+{
+    "Source-Files": ["configfile-glue.c"],
+    "Functions": ["config_check_cond_nocache"]
+}

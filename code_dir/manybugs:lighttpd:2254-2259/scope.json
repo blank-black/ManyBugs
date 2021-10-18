@@ -1,0 +1,4 @@
+{
+    "Source-Files": ["mod_secure_download.c"],
+    "Functions": ["mod_secdownload_patch_connection"]
+}

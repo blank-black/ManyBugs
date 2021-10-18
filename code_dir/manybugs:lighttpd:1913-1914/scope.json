@@ -1,0 +1,4 @@
+{
+    "Source-Files": ["mod_cgi.c"],
+    "Functions": ["cgi_create_env"]
+}
