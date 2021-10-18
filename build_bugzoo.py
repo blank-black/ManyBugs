@@ -94,6 +94,7 @@ def main():
 def run_build_bugzoo():
     try:
         os.system('pip3 install --upgrade pip')
+        os.system('pip3 install pipenv')
         os.chdir(WORK_PATH)
         os.system('git clone https://github.com/blank-black/BugZoo')
         os.chdir('Bugzoo')
@@ -145,10 +146,11 @@ def run_container(name):
             os.chdir(os.path.join(WORK_PATH, 'BugZoo'))
             os.system('pipenv run bugzoo bug build ' + name)
             os.chdir(WORK_PATH)
-        for n in [i.tags[0] for i in client.images.list()]:
-            if name.split(':')[-1] in n:
-                image_tag = n
-                break
+            client = docker.from_env()
+            for n in [i.tags[0] for i in client.images.list()]:
+                if name.split(':')[-1] in n:
+                    image_tag = n
+                    break
         if not image_tag:
             print("Can't build bug!")
             os.chdir(WORK_PATH)
