@@ -34,19 +34,23 @@ def main():
     parser.add_argument("--max-core", "-core", dest='max_core',
                         default=6)
     parser.add_argument("--name", "-n", dest='name',
-                        default='')
+                        default='', help='run single version name')
     parser.add_argument("--program", "-p", dest='program',
-                        default='')
+                        default='', help='specific program: e.g. php')
     parser.add_argument("--work-path", "-path", dest='work_path',
                         default='.')
     parser.add_argument("--script-name", "-script", dest='script_name',
-                        default='run.py')
+                        default='run.py', help='in docker script, default run.py')
     parser.add_argument("--log-dir", "-log", dest='log_dir',
-                        default='log')
-    parser.add_argument("--delete-container", action='store_true', default=False)
-    parser.add_argument("--print-to-screen", action='store_true', default=False)
-    parser.add_argument("--read-file", action='store_true', default=False)
-    parser.add_argument("--file-name", dest='file_name', default='target.txt')
+                        default='log', help='log path, default log/')
+    parser.add_argument("--delete-container", action='store_true', default=False,
+                        help='if delete container after finish, default false')
+    parser.add_argument("--print-to-screen", action='store_true', default=False,
+                        help='if print log to screen, default false')
+    parser.add_argument("--read-file", action='store_true', default=False,
+                        help='if read target versions from file, default false')
+    parser.add_argument("--file-name", dest='file_name', default='target.txt',
+                        help='name of reading from file')
 
     args = parser.parse_args()
     global MAX_CORE
