@@ -32,7 +32,7 @@ def main():
     parser = argparse.ArgumentParser(add_help=True, usage="")
     # parser.add_argument("--build-bugzoo", action='store_true', default=False)
     parser.add_argument("--max-core", "-core", dest='max_core',
-                        default=6)
+                        default=6, help='max cores for parallel, default 6')
     parser.add_argument("--name", "-n", dest='name',
                         default='', help='run single version name')
     parser.add_argument("--program", "-p", dest='program',
