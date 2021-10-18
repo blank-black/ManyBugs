@@ -23,6 +23,11 @@ check_value = 'all test passed'
 URL = "http://127.0.0.1:8080"
 
 
+# Need python library: docker + bugzoo installed!
+# pip3 install docker
+# pip3 install bugzoo
+
+
 def main():
     parser = argparse.ArgumentParser(add_help=True, usage="")
     # parser.add_argument("--build-bugzoo", action='store_true', default=False)
