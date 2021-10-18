@@ -1,16 +1,22 @@
 # ManyBugs
 
-**TODO:** Add a description of ManyBugs.
 
-## Installation
-
-The ManyBugs dataset is compatible with
-[BugZoo](https://github.com/squaresLab/BugZoo), a platform for studying
-historical software bugs. To install the ManyBugs dataset to your local
-machine, simply execute the following:
+## Pre requirement installation
 
 ```
 $ pip3 install --upgrade bugzoo
-$ bugzoo source add manybugs https://github.com/squaresLab/ManyBugs
-$ bugzoo source update
+$ pip3 install --upgrade docker
 ```
+
+## Run
+
+- Running with single version
+```
+$ python3 build_bugzoo.py -n semu/manybugs:php-2011-01-18-95388b7cda-b9b1fb1827
+```
+
+- Running with versions list in file (default: target.txt)
+```
+$ python3 build_bugzoo.py --read-file
+```
+
