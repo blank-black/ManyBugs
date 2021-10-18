@@ -102,12 +102,12 @@ def run_build_bugzoo():
             print('pipenv install error')
             # return 1
 
-        err = os.system('pipenv run bugzoo source add https://github.com/blank-black/ManyBugs')
+        err = os.system('pipenv run bugzoo source add manybugs https://github.com/blank-black/ManyBugs')
         if err != 0:
             print('bugzoo source add ManyBugs error')
             # return 1
 
-        err = os.system('pipenv run bugzoo source add https://github.com/squaresLab/genprog-code')
+        err = os.system('pipenv run bugzoo source add genprog https://github.com/squaresLab/genprog-code')
         if err != 0:
             print('bugzoo source add genprog error')
             # return 1
