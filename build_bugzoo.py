@@ -18,6 +18,7 @@ TARGET_FILE_NAME = ''
 CLEAN_CONTAINER = False
 PRINT_TO_SCREEN = False
 rebuild_container = True
+conda_mode = False
 check_item = 'buggy_err'
 check_value = 'all test passed'
 URL = "http://127.0.0.1:8080"
@@ -106,7 +107,7 @@ def run_build_bugzoo():
         os.system('pip3 install pipenv')
         os.chdir(WORK_PATH)
         os.system('git clone https://github.com/blank-black/BugZoo')
-        os.chdir('Bugzoo')
+        os.chdir('BugZoo')
         err = os.system('pipenv install .')
         if err != 0:
             print('pipenv install error')
