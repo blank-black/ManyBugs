@@ -18,7 +18,6 @@ TARGET_FILE_NAME = ''
 CLEAN_CONTAINER = False
 PRINT_TO_SCREEN = False
 rebuild_container = True
-conda_mode = False
 check_item = 'buggy_err'
 check_value = 'all test passed'
 URL = "http://127.0.0.1:8080"
@@ -147,14 +146,15 @@ def run_container(name):
             return '', ''
         built_flag = False
         image_tag = ''
-        for n in [i.tags[0] for i in client.images.list()]:
-            if name.split(':')[-1] in n:
+        for i in client.images.list():
+            if i.tags and name.split(':')[-1] in i.tags[0]:
                 built_flag = True
-                image_tag = n
+                image_tag = i.tags[0]
                 break
+
         if not built_flag:
             os.chdir(os.path.join(WORK_PATH, 'BugZoo'))
-            os.system('pipenv run bugzoo bug build ' + name)
+            os.system('pipenv run bugzoo bug build ' + name + ' > /dev/null 2>&1')
             os.chdir(WORK_PATH)
             client = docker.from_env()
             for n in [i.tags[0] for i in client.images.list()]:
@@ -170,7 +170,7 @@ def run_container(name):
         os.system('pipenv run bugzoo container launch -v ' + WORK_PATH + ':/data ' + name)
         os.chdir(WORK_PATH)
         for i in client.containers.list():
-            if image_tag == i.image.tags[0]:
+            if i.image.tags and image_tag == i.image.tags[0]:
                 return name, i.short_id
         print("Can't launch container!")
         return '', ''
