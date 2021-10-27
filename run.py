@@ -28,12 +28,11 @@ def main():
     os.system('cd /experiment/src && CC="wllvm" CFLAGS="-c -emit-llvm -g -o -O0" make -j2')
 
     for sub_path in sub_path_arr:
-        os.system('cd /experiment/src/' + '/'.join(sub_path.split('/')[:-1]) + ' && extract-bc '
-                  + sub_path.split('/')[-1].split('.')[0] + '.o')
+        # os.system('cd /experiment/src/' + '/'.join(sub_path.split('/')[:-1]) + ' && extract-bc '
+        #           + sub_path.split('/')[-1].split('.')[0] + '.o')
         os.system('cd /experiment/src/' + '/'.join(sub_path.split('/')[:-1])
-                  + ' && mart -no-compilation ' + sub_path.split('/')[-1].split('.')[0]
+                  + ' && mart -no-compilation .' + sub_path.split('/')[-1].split('.')[0]
                   + '.o.bc')
-
 
 
 if __name__ == "__main__":
