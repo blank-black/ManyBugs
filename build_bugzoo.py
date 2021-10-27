@@ -137,7 +137,7 @@ def run_container(name):
         client_bugzoo = bugzoo.Client(URL)
         find_flag = False
         for n in client_bugzoo.bugs:
-            if name.split(':')[-1] in client_bugzoo.bugs[n].name.replace(':', '-'):
+            if name.split(':')[-1].replace(':', '-') in client_bugzoo.bugs[n].name.replace(':', '-'):
                 name = client_bugzoo.bugs[n].name
                 find_flag = True
                 break
@@ -147,20 +147,22 @@ def run_container(name):
         built_flag = False
         image_tag = ''
         for i in client.images.list():
-            if i.tags and name.split(':')[-1] in i.tags[0]:
+            if i.tags and name.split(':')[-1].replace(':', '-') in i.tags[0].replace(':', '-'):
                 built_flag = True
                 image_tag = i.tags[0]
                 break
 
         if not built_flag:
             os.chdir(os.path.join(WORK_PATH, 'BugZoo'))
+            print('build ' + name + ' start')
             os.system('pipenv run bugzoo bug build ' + name + ' > /dev/null 2>&1')
             os.chdir(WORK_PATH)
             client = docker.from_env()
-            for n in [i.tags[0] for i in client.images.list()]:
-                if name.split(':')[-1] in n:
-                    image_tag = n
+            for i in client.images.list():
+                if i.tags and name.split(':')[-1].replace(':', '-') in i.tags[0].replace(':', '-'):
+                    image_tag = i.tags[0]
                     break
+
         if not image_tag:
             print("Can't build bug!")
             os.chdir(WORK_PATH)
@@ -250,7 +252,7 @@ def run_single_version(name, work_path, script_name, log_dir, print_to_screen, c
     if name and rebuild_container:
         name, container_id = run_container(name)
     if not name:
-        print('Can find bug in bugzoo!')
+        print("Can't find bug in bugzoo!")
         return 1
 
     else:
