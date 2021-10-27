@@ -8,7 +8,7 @@ import argparse
 import subprocess
 import json
 
-MAX_CORE = 6
+MAX_CORE = 10
 PROGRAM = ''
 WORK_PATH = ''
 SCRIPT_NAME = ''
@@ -32,7 +32,7 @@ def main():
     parser = argparse.ArgumentParser(add_help=True, usage="")
     # parser.add_argument("--build-bugzoo", action='store_true', default=False)
     parser.add_argument("--max-core", "-core", dest='max_core',
-                        default=6, help='max cores for parallel, default 6')
+                        default=10, help='max cores for parallel, default 10')
     parser.add_argument("--name", "-n", dest='name',
                         default='', help='run single version name')
     parser.add_argument("--program", "-p", dest='program',
@@ -153,12 +153,7 @@ def run_container(name):
                 break
         if not built_flag:
             os.chdir(os.path.join(WORK_PATH, 'BugZoo'))
-            if not os.path.isdir(os.path.join(WORK_PATH, 'build_log')):
-                os.system('mkdir ' + os.path.join(WORK_PATH, 'build_log'))
-            if not PRINT_TO_SCREEN:
-                os.system('pipenv run bugzoo bug build ' + name + ' > ' + os.path.join(WORK_PATH, 'build_log', name + '.log 2>&1'))
-            else:
-                os.system('pipenv run bugzoo bug build ' + name)
+            os.system('pipenv run bugzoo bug build ' + name)
             os.chdir(WORK_PATH)
             client = docker.from_env()
             for n in [i.tags[0] for i in client.images.list()]:
